@@ -38,7 +38,6 @@ export const metadata: Metadata = {
         alt: "Casa modular contemporánea CONCREBOX en Panamá",
       },
     ],
-    authors: ["https://www.facebook.com/ConcreboxPTY"],
   },
   twitter: {
     card: "summary_large_image",
