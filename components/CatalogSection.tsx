@@ -3,7 +3,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useMemo, useState } from "react";
-import { catalogModels, type CatalogModel } from "@/data/catalog";
+import {
+  catalogCollections,
+  type CatalogModel,
+  type CatalogYear,
+} from "@/data/catalog";
 import { ModelCard } from "./ModelCard";
 import {
   ModelFilters,
@@ -13,21 +17,30 @@ import { ModelGalleryModal } from "./ModelGalleryModal";
 import { Reveal } from "./Reveal";
 
 export function CatalogSection() {
+  const [selectedCatalog, setSelectedCatalog] = useState<CatalogYear>("2025");
   const [filter, setFilter] = useState<CatalogFilter>("all");
   const [selectedModel, setSelectedModel] = useState<CatalogModel | null>(null);
   const [selectedImage, setSelectedImage] = useState(0);
+  const activeCatalog = catalogCollections[selectedCatalog];
 
   const filteredModels = useMemo(
     () =>
-      catalogModels.filter((model) => {
+      activeCatalog.models.filter((model) => {
         if (filter === "one-bedroom") return model.bedrooms === 1;
         if (filter === "two-bedrooms") return model.bedrooms === 2;
         if (filter === "terrace") return model.hasTerrace;
         if (filter === "compact") return model.compact;
         return true;
       }),
-    [filter],
+    [activeCatalog.models, filter],
   );
+
+  const changeCatalog = (year: CatalogYear) => {
+    setSelectedCatalog(year);
+    setFilter("all");
+    setSelectedModel(null);
+    setSelectedImage(0);
+  };
 
   const openGallery = (model: CatalogModel, imageIndex: number) => {
     setSelectedImage(imageIndex);
@@ -45,22 +58,29 @@ export function CatalogSection() {
             <div className="section-heading">
               <span className="eyebrow">
                 <span />
-                Catálogo arquitectónico
+                {activeCatalog.eyebrow}
               </span>
-              <h2>Modelos CONCREBOX</h2>
-              <p>
-                Explora cada fachada y plano en detalle. Nueve propuestas
-                modulares que pueden adaptarse a tu terreno, estilo de vida y
-                objetivo de inversión.
-              </p>
+              <h2>{activeCatalog.title}</h2>
+              <p>{activeCatalog.description}</p>
             </div>
             <div className="catalog__heading-note">
-              <span>09 modelos</span>
-              <p>
-                Selecciona una imagen para verla en alta resolución y navegar
-                entre las vistas disponibles.
-              </p>
+              <span>{activeCatalog.countLabel}</span>
+              <p>{activeCatalog.note}</p>
             </div>
+          </div>
+
+          <div className="catalog-switcher" aria-label="Seleccionar catálogo">
+            {(["2025", "2026"] as CatalogYear[]).map((year) => (
+              <button
+                key={year}
+                type="button"
+                className={selectedCatalog === year ? "is-active" : ""}
+                aria-pressed={selectedCatalog === year}
+                onClick={() => changeCatalog(year)}
+              >
+                {catalogCollections[year].label}
+              </button>
+            ))}
           </div>
 
           <ModelFilters
@@ -74,7 +94,7 @@ export function CatalogSection() {
               {filteredModels.map((model, index) => (
                 <motion.div
                   layout
-                  key={model.id}
+                  key={`${selectedCatalog}-${model.id}`}
                   className="catalog-card"
                   initial={false}
                   animate={{ opacity: 1, y: 0 }}

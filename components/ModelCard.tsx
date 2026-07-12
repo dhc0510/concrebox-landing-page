@@ -17,7 +17,8 @@ import { useState } from "react";
 
 function FeatureIcon({ feature }: { feature: string }) {
   const normalized = feature.toLowerCase();
-  if (normalized.includes("dormitorio")) return <BedDouble />;
+  if (normalized.includes("dormitorio") || normalized.includes("recámara"))
+    return <BedDouble />;
   if (normalized.includes("baño")) return <Bath />;
   if (normalized.includes("cocina")) return <ChefHat />;
   if (normalized.includes("cochera")) return <CarFront />;
@@ -44,7 +45,7 @@ export function ModelCard({
   };
 
   const whatsapp = `https://wa.me/50768272867?text=${encodeURIComponent(
-    `Hola, vi la página de CONCREBOX y quiero más información sobre ${model.name} (${model.area}).`,
+    `Hola, vi la página de CONCREBOX y quiero más información sobre ${model.name} (${model.area}${model.price ? `, ${model.price}` : ""}).`,
   )}`;
 
   return (
@@ -122,6 +123,9 @@ export function ModelCard({
             <div>
               <h3>{model.name}</h3>
               <span className="catalog-card__area">{model.area}</span>
+              {model.price && (
+                <span className="catalog-card__price">{model.price}</span>
+              )}
             </div>
           </div>
           <span className="catalog-card__badge">{model.eyebrow}</span>

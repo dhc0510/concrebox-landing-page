@@ -60,7 +60,7 @@ export function ModelGalleryModal({
 
   const whatsapp = model
     ? `https://wa.me/50768272867?text=${encodeURIComponent(
-        `Hola, vi la página de CONCREBOX y quiero más información sobre ${model.name} (${model.area}).`,
+        `Hola, vi la página de CONCREBOX y quiero más información sobre ${model.name} (${model.area}${model.price ? `, ${model.price}` : ""}).`,
       )}`
     : "#";
 
@@ -94,6 +94,7 @@ export function ModelGalleryModal({
                 </span>
                 <h2 id="model-modal-title">{model.name}</h2>
                 <p>{model.area}</p>
+                {model.price && <p>{model.price}</p>}
               </div>
               <button
                 ref={closeButtonRef}
