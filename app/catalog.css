@@ -74,17 +74,21 @@
 }
 
 .catalog-filters {
+  display: block;
+  margin-top: 64px;
+  padding: 15px 18px 18px;
+  border: 1px solid var(--line-light);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 12px 35px rgba(30, 26, 20, 0.04);
+  backdrop-filter: blur(12px);
+}
+
+.catalog-filters__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 28px;
-  margin-top: 64px;
-  padding: 15px 18px;
-  border: 1px solid var(--line-light);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.75);
-  box-shadow: 0 12px 35px rgba(30, 26, 20, 0.04);
-  backdrop-filter: blur(12px);
 }
 
 .catalog-filters__list {
@@ -128,6 +132,108 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.catalog-filters__advanced {
+  display: grid;
+  grid-template-columns:
+    minmax(210px, 1.35fr) minmax(135px, 0.9fr) minmax(135px, 0.9fr)
+    minmax(165px, 1fr) minmax(145px, 0.95fr) auto;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line-light);
+}
+
+.catalog-filter-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.catalog-filter-field span {
+  color: #98938c;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.catalog-filter-field input,
+.catalog-filter-field select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #55514c;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.catalog-filter-field input,
+.catalog-filter-field select {
+  padding: 0 14px;
+}
+
+.catalog-filter-field select {
+  cursor: pointer;
+}
+
+.catalog-filter-field input:focus,
+.catalog-filter-field select:focus {
+  border-color: rgba(197, 155, 58, 0.72);
+  box-shadow: 0 0 0 3px rgba(197, 155, 58, 0.12);
+}
+
+.catalog-filter-field--price {
+  justify-content: center;
+}
+
+.catalog-filter-field input[type="range"] {
+  min-height: 42px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  accent-color: var(--gold);
+  cursor: pointer;
+}
+
+.catalog-filters__clear {
+  align-self: end;
+  min-height: 42px;
+  padding: 0 15px;
+  border: 1px solid rgba(17, 17, 17, 0.16);
+  border-radius: 999px;
+  background: transparent;
+  color: #55514c;
+  cursor: pointer;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.catalog-filters__clear:not(:disabled):hover {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--white);
+}
+
+.catalog-filters__clear:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
 }
 
 .catalog .catalog-grid {
@@ -737,6 +843,18 @@
 }
 
 @media (max-width: 1100px) {
+  .catalog-filters__advanced {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .catalog-filter-field--search {
+    grid-column: span 2;
+  }
+
+  .catalog-filters__clear {
+    width: 100%;
+  }
+
   .catalog .catalog-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -762,6 +880,10 @@
     border-radius: 18px;
   }
 
+  .catalog-filters__top {
+    display: block;
+  }
+
   .catalog-filters__list {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -782,16 +904,35 @@
     padding: 8px 10px 2px;
   }
 
+  .catalog-filters__advanced {
+    grid-template-columns: 1fr;
+    gap: 11px;
+    margin-top: 10px;
+    padding-top: 13px;
+  }
+
+  .catalog-filter-field--search {
+    grid-column: auto;
+  }
+
   .catalog-switcher {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     margin-top: 34px;
     border-radius: 18px;
   }
 
   .catalog-switcher button {
-    flex: 1;
+    min-width: 0;
+    flex: 1 1 calc(50% - 7px);
     padding: 0 10px;
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  .catalog-switcher button:last-child {
+    flex-basis: 100%;
   }
 
   .catalog .catalog-grid {

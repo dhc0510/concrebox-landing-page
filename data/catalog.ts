@@ -4,6 +4,7 @@ export type CatalogImage = {
 };
 
 export type CatalogYear = "2025" | "2026";
+export type CatalogMode = CatalogYear | "complete";
 
 export type CatalogModel = {
   id: number;
@@ -20,7 +21,7 @@ export type CatalogModel = {
 };
 
 export type CatalogCollection = {
-  year: CatalogYear;
+  mode: CatalogMode;
   label: string;
   eyebrow: string;
   title: string;
@@ -55,13 +56,16 @@ const catalog2025Models: CatalogModel[] = [
     price: "B/. 51,639.00",
     eyebrow: "Eficiente",
     images: [
-      { src: "/images/catalog/singapur-fachada.png", label: "Fachada" },
+      {
+        src: "/images/catalog/singapur-fachada-2-dormitorios.png",
+        label: "Fachada",
+      },
       { src: "/images/catalog/singapur-plano.png", label: "Plano" },
     ],
-    features: ["1 dormitorio", "1 baño", "Sala + cocina", "Terraza"],
+    features: ["2 dormitorios", "1 baño", "Sala + cocina", "Terraza"],
     description:
       "Modelo compacto y bien distribuido, pensado para casas vacacionales, parejas o familias pequeñas que buscan eficiencia y comodidad.",
-    bedrooms: 1,
+    bedrooms: 2,
     hasTerrace: true,
     compact: true,
   },
@@ -379,9 +383,9 @@ const catalog2026Models: CatalogModel[] = [
 
 export const catalogModels = catalog2025Models;
 
-export const catalogCollections: Record<CatalogYear, CatalogCollection> = {
+export const catalogCollections: Record<CatalogMode, CatalogCollection> = {
   "2025": {
-    year: "2025",
+    mode: "2025",
     label: "Catálogo 2025",
     eyebrow: "Catálogo arquitectónico",
     title: "Modelos CONCREBOX",
@@ -392,7 +396,7 @@ export const catalogCollections: Record<CatalogYear, CatalogCollection> = {
     models: catalog2025Models,
   },
   "2026": {
-    year: "2026",
+    mode: "2026",
     label: "Catálogo 2026",
     eyebrow: "Catálogo arquitectónico 2026",
     title: "Modelos CONCREBOX",
@@ -401,5 +405,16 @@ export const catalogCollections: Record<CatalogYear, CatalogCollection> = {
     countLabel: "08 modelos",
     note: "Selecciona una imagen para verla en alta resolución y navegar entre fachada y plano del modelo activo.",
     models: catalog2026Models,
+  },
+  complete: {
+    mode: "complete",
+    label: "Catálogo completo",
+    eyebrow: "Catálogo completo",
+    title: "Modelos CONCREBOX",
+    description:
+      "Explora en un solo lugar todos los modelos disponibles de los catálogos 2025 y 2026, con fachadas, planos, áreas, distribución y precios.",
+    countLabel: "17 modelos",
+    note: "Selecciona una imagen para verla en alta resolución. Los filtros trabajan sobre ambos catálogos a la vez.",
+    models: [...catalog2025Models, ...catalog2026Models],
   },
 };
