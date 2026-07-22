@@ -72,6 +72,7 @@ No aplica en el alcance actual.
 - `framer-motion` para animaciones.
 - `lucide-react` para iconos.
 - `@fontsource/manrope` y `@fontsource/playfair-display` para fuentes.
+- `overrides.minimatch` se usa para mantener auditoría completa limpia en tooling de lint.
 
 ## Decisiones pendientes
 

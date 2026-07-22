@@ -19,7 +19,7 @@ Este documento cubre el repositorio de la landing page publicada en `https://con
 | Control | Estado | Evidencia | Prueba | Pendiente |
 | --- | --- | --- | --- | --- |
 | Secretos | IMPLEMENTADO | `.gitignore`, GitHub Actions secrets referenciados sin valores | `npm run security:check` | Rotación solo desde Hostinger/GitHub si se sospecha exposición |
-| Dependencias producción | CORREGIDO | `package.json`, `package-lock.json` | `npm run security:audit-deps` | Hallazgo dev-only documentado abajo |
+| Dependencias producción y tooling | CORREGIDO | `package.json`, `package-lock.json`, overrides auditados | `npm audit --audit-level=moderate`, `npm run security:audit-deps` | Revalidar al actualizar ESLint/Next |
 | SQL Injection | NO APLICA | No hay backend ni base de datos | Revisión de arquitectura | No aplica |
 | Otras inyecciones servidor | NO APLICA | No hay servidor que procese entradas | Revisión de arquitectura | No aplica |
 | XSS/DOM | IMPLEMENTADO | React escape por defecto, allowlist para JSON-LD, check de sinks | `npm run security:check` | CSP usa `unsafe-inline` por compatibilidad con Next estático |
@@ -64,13 +64,13 @@ Estado: implementado en código y verificado localmente por archivo. Pendiente: 
 ### Dependencias
 
 - Producción auditada con `npm audit --omit=dev --audit-level=moderate`.
-- `next`, `postcss` y `sharp` quedaron en versiones corregidas mediante lockfile/overrides.
+- `next`, `postcss`, `sharp` y `minimatch` quedan en versiones corregidas mediante lockfile/overrides.
+- `minimatch@10.2.5` se fuerza con `overrides` para resolver el advisory transitivo de `brace-expansion` en tooling dev sin usar `npm audit fix --force`.
 
 ## Riesgos aceptados o residuales
 
 | Riesgo | Severidad | Motivo | Acción futura |
 | --- | --- | --- | --- |
-| `npm audit` completo reporta `brace-expansion` vía tooling de ESLint | MEDIO | Dependencia dev-only; no se envía al navegador ni a Hostinger. La corrección automática requiere `--force` con cambio rompedor/downgrade sugerido por npm. | Revisar cuando `eslint`, `eslint-config-next` o plugins publiquen una ruta no rompedora. |
 | CSP contiene `unsafe-inline` para scripts/estilos | BAJO | Next exportado puede necesitar inline scripts/estilos; quitarlo podría romper hidratación o estilos. | Endurecer CSP si se implementa nonce/hash compatible y se prueba visualmente. |
 | Headers no verificados por request remoto | BAJO | El prompt no autoriza pruebas contra producción sin permiso explícito. | Con autorización, verificar con `curl -I https://concreboxpty.com/`. |
 

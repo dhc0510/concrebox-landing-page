@@ -12,6 +12,7 @@ Estado vigente del proyecto. Mantener breve y orientado a lo que funciona hoy.
 - Metadatos SEO/sociales, canonical de producción, `robots.txt`, `sitemap.xml`, JSON-LD y checks `seo:*`.
 - Imágenes principales de la landing optimizadas en JPG para reducir peso sin cambiar la dirección visual.
 - Base de seguridad para sitio estático: headers en `.htaccess`, checks `security:*`, audit de dependencias de producción y documentación en `docs/SECURITY.md`.
+- Auditoría completa de dependencias sin vulnerabilidades moderadas/altas tras override de `minimatch`.
 - Deploy automático a Hostinger desde GitHub Actions cuando se hace push a `main`.
 - Sistema de documentación continua en `docs/` con `AGENTS.md`, scripts `docs:*`, hook versionado y validación en CI.
 
@@ -33,7 +34,6 @@ Estado vigente del proyecto. Mantener breve y orientado a lo que funciona hoy.
 - Hay assets pesados no referenciados en `public/images/`; no afectan la carga principal, pero aumentan el tamaño potencial de deploy si se sube todo `public/`.
 - Hostinger depende de secrets FTP en GitHub Actions; no deben documentarse valores sensibles.
 - `npm run start` no representa el modo de producción real en Hostinger Single, porque producción sirve archivos estáticos de `out/`.
-- `npm audit` completo mantiene un hallazgo dev-only por `brace-expansion` vía ESLint; producción pasa con `npm run security:audit-deps`.
 - Los headers están configurados en `.htaccess`, pero su presencia en producción debe verificarse con autorización para consultar el dominio.
 
 ## Próximos pasos priorizados
@@ -46,4 +46,4 @@ Estado vigente del proyecto. Mantener breve y orientado a lo que funciona hoy.
 
 ## Última verificación relevante
 
-- Confirmado en esta tarea: `npm run build`, `npm run seo:check`, `npm run seo:links`, `npm run seo:assets`, `npm run seo:build`, `npm run seo:sitemap`, `npm run security:check`, `npm run security:headers`, `npm run security:audit-deps`, `npm run docs:sync`, `npm run docs:check` y `npm run lint`.
+- Confirmado en esta tarea: `npm ci`, `npm run build`, `npm run lint`, `npm audit --audit-level=moderate`, `npm run security:audit-deps`, `npm run security:check`, `npm run security:headers`, `npm run seo:check`, `npm run seo:links`, `npm run seo:assets`, `npm run seo:build`, `npm run seo:sitemap`, `npm run docs:check` y smoke headless con Edge contra `out/` servido localmente.
