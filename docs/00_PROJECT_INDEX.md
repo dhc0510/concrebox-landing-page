@@ -24,6 +24,7 @@ Contenido administrado automáticamente. No editar dentro de los marcadores.
 - [06_DECISIONS.md](06_DECISIONS.md)
 - [07_TASK_CONTEXT_TEMPLATE.md](07_TASK_CONTEXT_TEMPLATE.md)
 - [SECURITY.md](SECURITY.md)
+- [SEO.md](SEO.md)
 <!-- AUTO-GENERATED:END documentos -->
 
 ## Cuándo consultar cada documento
@@ -35,12 +36,14 @@ Contenido administrado automáticamente. No editar dentro de los marcadores.
 - [05_COMMANDS.md](05_COMMANDS.md): comandos reales y verificados.
 - [06_DECISIONS.md](06_DECISIONS.md): decisiones materiales con impacto futuro.
 - [07_TASK_CONTEXT_TEMPLATE.md](07_TASK_CONTEXT_TEMPLATE.md): plantilla breve para futuras tareas con Codex.
+- [SEO.md](SEO.md): estado SEO técnico, assets, checks y riesgos de rendimiento.
 
 ## Orden de lectura recomendado
 
 - Tarea general: `AGENTS.md` → este índice → `01_CURRENT_STATUS.md`.
 - Cambio visual o funcional: añade `02_REQUIREMENTS.md`, `03_ARCHITECTURE.md` y `04_MODULE_MAP.md`.
 - Cambio de scripts, build, CI o despliegue: añade `05_COMMANDS.md`, `03_ARCHITECTURE.md` y `06_DECISIONS.md`.
+- Cambio SEO, metadata, sitemap, previews sociales o rendimiento de imágenes: añade `SEO.md`, `03_ARCHITECTURE.md`, `05_COMMANDS.md` y `06_DECISIONS.md`.
 - Cambio documental: añade este índice, `05_COMMANDS.md` y `AGENTS.md`.
 
 ## Estructura detectada

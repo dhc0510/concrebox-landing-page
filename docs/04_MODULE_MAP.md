@@ -33,6 +33,7 @@ Contenido administrado automáticamente. No editar dentro de los marcadores.
 | Estilos globales | `app/globals.css` | Diseño general de la landing | Clases globales | Todo el sitio |
 | Automatización docs | `scripts/docs-tools.mjs` | Sync/check/status/watch documental | Git, docs, package.json | npm scripts, hook |
 | Seguridad estática | `scripts/security-check.mjs` | Validación de headers, secretos, enlaces y sinks DOM | Código fuente, `.htaccess`, workflow | npm scripts, hook, CI |
+| SEO técnico | `scripts/seo-tools.mjs` | Validación de metadata, canonical, JSON-LD, links, robots, sitemap y assets | Export `out/`, código fuente, `public/` | npm scripts, CI |
 | Hook docs | `.githooks/pre-commit` | Validación antes del commit | npm docs hook | Git local si se activa |
 | Headers Hostinger | `public/.htaccess` | HTTPS, headers de navegador y listado de directorios | Apache/Hostinger | Producción estática |
 | Deploy | `.github/workflows/deploy-hostinger.yml` | Build y FTP a Hostinger | GitHub secrets | GitHub Actions |

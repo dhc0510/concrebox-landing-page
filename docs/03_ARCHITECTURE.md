@@ -18,6 +18,7 @@ Aplicación frontend en Next.js con App Router, React, TypeScript, Tailwind CSS,
 - `public/`: imágenes, favicon, robots y sitemap.
 - `public/.htaccess`: redirección HTTPS y headers de seguridad para Hostinger/Apache.
 - `scripts/security-check.mjs`: validaciones deterministas de seguridad estática.
+- `scripts/seo-tools.mjs`: validaciones deterministas de SEO técnico, links, sitemap y assets.
 
 ## Flujo principal
 
@@ -44,8 +45,17 @@ No aplica en el alcance actual.
 ## Infraestructura y despliegue
 
 - `next.config.ts` usa `output: "export"` e imágenes sin optimización remota para generar sitio estático.
-- `.github/workflows/deploy-hostinger.yml` ejecuta `npm ci`, validación documental, validación de seguridad, audit de dependencias de producción, build y deploy FTP.
+- `.github/workflows/deploy-hostinger.yml` ejecuta `npm ci`, validación documental, validación de seguridad, audit de dependencias de producción, build, validación SEO del output y deploy FTP.
 - Producción se sirve desde `/domains/concreboxpty.com/public_html/` en Hostinger.
+
+## SEO y rendimiento
+
+- `app/layout.tsx` define metadata global, canonical, Open Graph, Twitter Card y JSON-LD.
+- El JSON-LD usa un grafo con `WebSite`, `HomeAndConstructionBusiness` y `FAQPage`.
+- `public/robots.txt` apunta al sitemap de producción.
+- `public/sitemap.xml` contiene la URL canónica principal.
+- Las imágenes principales de landing usan variantes `*-optimized.jpg` para reducir peso en el render inicial y se mantienen los PNG originales como assets históricos.
+- `npm run seo:check` valida el export estático en `out/` después del build.
 
 ## Seguridad
 

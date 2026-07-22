@@ -9,6 +9,7 @@ import "./globals.css";
 import "./catalog.css";
 
 const siteUrl = "https://concreboxpty.com";
+const canonicalUrl = `${siteUrl}/`;
 const siteName = "CONCREBOX PTY";
 const ogImage = "/images/og-concrebox.jpg";
 const title = "CONCREBOX PTY | Casas modulares personalizadas en Panamá";
@@ -23,19 +24,6 @@ export const metadata: Metadata = {
     template: `%s | ${siteName}`,
   },
   description,
-  keywords: [
-    "casas modulares panama",
-    "casas prefabricadas panama",
-    "casas transportables panama",
-    "construccion modular panama",
-    "casas airbnb panama",
-    "modular homes panama",
-    "concrebox pty",
-    "portable building service panama",
-    "casas modulares personalizadas",
-    "viviendas modulares panama",
-    "inversion inmobiliaria panama",
-  ],
   authors: [{ name: siteName, url: siteUrl }],
   creator: siteName,
   publisher: siteName,
@@ -44,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    url: siteUrl,
+    url: canonicalUrl,
     siteName,
     locale: "es_PA",
     type: "website",
@@ -64,7 +52,7 @@ export const metadata: Metadata = {
     images: [ogImage],
   },
   alternates: {
-    canonical: siteUrl,
+    canonical: canonicalUrl,
   },
   robots: {
     index: true,
@@ -102,59 +90,129 @@ export const viewport: Viewport = {
   themeColor: "#0d0d0d",
 };
 
-const localBusinessSchema = {
+const seoSchema = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: siteName,
-  legalName: "CONCREBOX PTY",
-  description,
-  url: siteUrl,
-  image: `${siteUrl}${ogImage}`,
-  logo: `${siteUrl}/favicon.svg`,
-  telephone: "+50768272867",
-  email: "concreboxpty@hotmail.com",
-  priceRange: "$$",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Parque Industrial Tocumen Storage",
-    addressLocality: "Panama City",
-    addressRegion: "Panamá",
-    addressCountry: "PA",
-  },
-  areaServed: {
-    "@type": "Country",
-    name: "Panamá",
-  },
-  sameAs: [
-    "https://www.instagram.com/concrebox_pty/",
-    "https://www.facebook.com/ConcreboxPTY",
-    "https://wa.me/50768272867",
-  ],
-  contactPoint: [
+  "@graph": [
     {
-      "@type": "ContactPoint",
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: siteName,
+      url: canonicalUrl,
+      inLanguage: "es-PA",
+      publisher: {
+        "@id": `${siteUrl}/#business`,
+      },
+    },
+    {
+      "@type": "HomeAndConstructionBusiness",
+      "@id": `${siteUrl}/#business`,
+      name: siteName,
+      legalName: "CONCREBOX PTY",
+      description,
+      url: canonicalUrl,
+      image: `${siteUrl}${ogImage}`,
+      logo: `${siteUrl}/favicon.svg`,
       telephone: "+50768272867",
-      contactType: "WhatsApp",
-      areaServed: "PA",
-      availableLanguage: ["es", "en"],
-    },
-  ],
-  makesOffer: [
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Casas modulares personalizadas",
-        serviceType: "Construcción modular",
+      email: "concreboxpty@hotmail.com",
+      priceRange: "$$",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Parque Industrial Tocumen Storage",
+        addressLocality: "Panama City",
+        addressRegion: "Panamá",
+        addressCountry: "PA",
       },
+      areaServed: {
+        "@type": "Country",
+        name: "Panamá",
+      },
+      sameAs: [
+        "https://www.instagram.com/concrebox_pty/",
+        "https://www.facebook.com/ConcreboxPTY",
+        "https://wa.me/50768272867",
+      ],
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+50768272867",
+          contactType: "WhatsApp",
+          areaServed: "PA",
+          availableLanguage: ["es", "en"],
+        },
+      ],
+      makesOffer: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Casas modulares personalizadas",
+            serviceType: "Construcción modular",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Soluciones modulares para Airbnb e inversión inmobiliaria",
+            serviceType: "Portable Building Service",
+          },
+        },
+      ],
     },
     {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Soluciones modulares para Airbnb e inversión inmobiliaria",
-        serviceType: "Portable Building Service",
-      },
+      "@type": "FAQPage",
+      "@id": `${siteUrl}/#faq`,
+      inLanguage: "es-PA",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Las casas son transportables?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Sí. Nuestro sistema se diseña desde el inicio considerando fabricación, transporte e instalación. La viabilidad final depende del modelo, el acceso y las condiciones del terreno.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Puedo personalizar el diseño?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Sí. Adaptamos distribución, dimensiones, fachadas, materiales y acabados para responder a tu estilo de vida, terreno y presupuesto.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Cuánto tarda el proceso?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "El plazo varía según el tamaño, nivel de personalización, permisos y condiciones del sitio. Tras conocer tu proyecto, preparamos una ruta de trabajo clara.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Puedo usarla para Airbnb?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Sí. Podemos diseñar unidades enfocadas en privacidad, experiencia del huésped, eficiencia operativa y atractivo fotográfico.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Dónde están ubicados?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Estamos ubicados en Tocume Storage Complex, Ciudad de Panamá, Panamá. Puedes visitarnos o coordinar una asesoría virtual.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Trabajan fuera de Panamá?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Evaluamos cada proyecto según destino, logística, normativas y accesibilidad. Escríbenos para revisar la viabilidad de tu ubicación.",
+          },
+        },
+      ],
     },
   ],
 };
@@ -170,7 +228,7 @@ export default function RootLayout({
         {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(seoSchema) }}
         />
       </body>
     </html>

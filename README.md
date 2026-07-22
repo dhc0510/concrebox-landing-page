@@ -6,7 +6,7 @@ El sitio presenta sus modelos, beneficios, sistema constructivo, proceso de trab
 
 [Ver sitio en producción](https://concreboxpty.com/)
 
-![Vista principal de CONCREBOX PTY](public/images/hero.png)
+![Vista principal de CONCREBOX PTY](public/images/hero-optimized.jpg)
 
 ## Características
 
@@ -124,6 +124,11 @@ El catálogo puede abrirse directamente desde:
 | `npm run security:check` | Verifica controles estáticos esenciales de seguridad. |
 | `npm run security:headers` | Verifica la configuración de headers en `public/.htaccess`. |
 | `npm run security:audit-deps` | Audita dependencias de producción. |
+| `npm run seo:check` | Verifica metadata, canonical, JSON-LD, robots, sitemap, links y assets del export estático. |
+| `npm run seo:links` | Verifica anchors internos y links externos seguros. |
+| `npm run seo:assets` | Verifica imágenes referenciadas y reporta assets pesados no usados. |
+| `npm run seo:build` | Verifica salida estática y metadata crítica. |
+| `npm run seo:sitemap` | Verifica `robots.txt` y `sitemap.xml`. |
 
 ## Estructura principal
 
@@ -180,13 +185,15 @@ Para agregar un modelo nuevo, añade un objeto en `data/catalog.ts` y guarda sus
 La landing incluye:
 
 - Título y descripción optimizados.
-- Palabras clave relacionadas con construcción modular en Panamá.
 - Open Graph para compartir el sitio en WhatsApp, Facebook y redes sociales.
 - Twitter Card.
 - URL canónica.
-- Schema `HomeAndConstructionBusiness` mediante JSON-LD.
+- Schema mediante JSON-LD con `WebSite`, `HomeAndConstructionBusiness` y `FAQPage`.
 - Imagen social dedicada `public/images/og-concrebox.jpg`.
 - `robots.txt` y `sitemap.xml`.
+- Comandos `seo:*` para evitar regresiones en el export estático.
+
+Las imágenes principales de la landing usan variantes JPG optimizadas, por ejemplo `hero-optimized.jpg`, para mantener calidad visual con menor peso de carga.
 
 ## Despliegue
 
@@ -202,7 +209,9 @@ Flujo de publicación:
 GitHub main
 → GitHub Actions
 → npm ci
+→ validaciones docs/security
 → npm run build
+→ npm run seo:check
 → carpeta out/
 → Hostinger public_html
 ```

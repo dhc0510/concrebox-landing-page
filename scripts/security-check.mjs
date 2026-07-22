@@ -44,7 +44,7 @@ const sourceExtensions = new Set([
 ]);
 
 const allowedDangerousSnippets = [
-  "dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}",
+  "dangerouslySetInnerHTML={{ __html: JSON.stringify(seoSchema) }}",
 ];
 
 function relative(filePath) {

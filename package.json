@@ -15,7 +15,12 @@
     "security:check": "node scripts/security-check.mjs check",
     "security:test": "npm run security:check",
     "security:headers": "node scripts/security-check.mjs headers",
-    "security:audit-deps": "npm audit --omit=dev --audit-level=moderate"
+    "security:audit-deps": "npm audit --omit=dev --audit-level=moderate",
+    "seo:check": "node scripts/seo-tools.mjs check",
+    "seo:links": "node scripts/seo-tools.mjs links",
+    "seo:assets": "node scripts/seo-tools.mjs assets",
+    "seo:build": "node scripts/seo-tools.mjs build",
+    "seo:sitemap": "node scripts/seo-tools.mjs sitemap"
   },
   "dependencies": {
     "@fontsource/manrope": "latest",

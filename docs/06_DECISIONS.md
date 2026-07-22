@@ -31,3 +31,19 @@
 - Contexto: el proyecto no tiene backend, base de datos, autenticación, API ni formularios procesados por servidor.
 - Motivo: reducir riesgos reales del frontend/hosting sin inventar una arquitectura inexistente.
 - Consecuencias: SQL Injection, CSRF, CORS, auth, sesiones, SSRF y rate limit propio quedan documentados como no aplicables; headers, secretos, dependencias, XSS/DOM y enlaces externos se validan localmente.
+
+## 2026-07-22 — SEO técnico verificable para sitio estático
+
+- Estado: aceptada.
+- Decisión: validar SEO mediante scripts Node locales sin dependencias nuevas y ejecutar `npm run seo:check` en CI después del build.
+- Contexto: el sitio se exporta como HTML estático para Hostinger y necesita previews sociales, canonical y crawl básicos confiables.
+- Motivo: evitar regresiones en metadata, JSON-LD, sitemap, robots, enlaces y assets sin depender de revisión manual.
+- Consecuencias: el SEO se verifica sobre `out/`; se debe ejecutar `npm run build` antes de los comandos `seo:*`.
+
+## 2026-07-22 — Optimización de imágenes principales
+
+- Estado: aceptada.
+- Decisión: crear variantes JPG `*-optimized.jpg` para imágenes principales de hero, sistema, modelos y galería.
+- Contexto: las imágenes PNG principales pesaban entre 2.2 MB y 2.9 MB cada una.
+- Motivo: reducir peso de carga manteniendo la calidad visual premium de la landing.
+- Consecuencias: los PNG originales permanecen en `public/images/` como referencia histórica, pero la landing usa las variantes optimizadas.

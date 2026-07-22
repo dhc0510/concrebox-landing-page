@@ -40,6 +40,9 @@ jobs:
       - name: Build static site
         run: npm run build
 
+      - name: Check SEO output
+        run: npm run seo:check
+
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:

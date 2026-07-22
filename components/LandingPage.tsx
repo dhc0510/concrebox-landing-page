@@ -100,25 +100,25 @@ const models = [
   {
     name: "Modelo Compacto",
     eyebrow: "Esencial",
-    image: "/images/compact.png",
+    image: "/images/compact-optimized.jpg",
     text: "Un refugio eficiente y sofisticado para parejas, huéspedes o escapadas privadas.",
   },
   {
     name: "Modelo Familiar",
     eyebrow: "Versátil",
-    image: "/images/family.png",
+    image: "/images/family-optimized.jpg",
     text: "Espacios amplios y conectados para vivir con comodidad, luz y naturaleza.",
   },
   {
     name: "Modelo Premium",
     eyebrow: "Signature",
-    image: "/images/premium.png",
+    image: "/images/premium-optimized.jpg",
     text: "Arquitectura modular de autor con mayor escala, acabados y presencia.",
   },
   {
     name: "Modelo Inversión",
     eyebrow: "Hospitality",
-    image: "/images/investment.png",
+    image: "/images/investment-optimized.jpg",
     text: "Un concepto repetible para Airbnb, glamping y destinos de alto valor.",
   },
 ];
@@ -134,27 +134,27 @@ const process = [
 
 const gallery = [
   {
-    src: "/images/hero.png",
+    src: "/images/hero-optimized.jpg",
     title: "Residencia tropical",
     className: "gallery-item--wide",
   },
   {
-    src: "/images/interior.png",
+    src: "/images/interior-optimized.jpg",
     title: "Interior a medida",
     className: "gallery-item--tall",
   },
   {
-    src: "/images/installation.png",
+    src: "/images/installation-optimized.jpg",
     title: "Instalación en sitio",
     className: "",
   },
   {
-    src: "/images/premium.png",
+    src: "/images/premium-optimized.jpg",
     title: "Casa frente al mar",
     className: "",
   },
   {
-    src: "/images/investment.png",
+    src: "/images/investment-optimized.jpg",
     title: "Retiro de inversión",
     className: "gallery-item--wide",
   },
@@ -362,7 +362,7 @@ export function LandingPage() {
       <section id="inicio" ref={heroRef} className="hero">
         <motion.div className="hero__image" style={{ y: heroY, opacity: heroOpacity }}>
           <Image
-            src="/images/hero.png"
+            src="/images/hero-optimized.jpg"
             alt="Casa modular de lujo CONCREBOX rodeada de naturaleza tropical"
             fill
             priority
@@ -489,7 +489,7 @@ export function LandingPage() {
       <section className="system section">
         <div className="system__image-wrap">
           <Image
-            src="/images/system.png"
+            src="/images/system-optimized.jpg"
             alt="Sistema estructural modular de precisión CONCREBOX"
             fill
             sizes="(max-width: 900px) 100vw, 52vw"
@@ -606,7 +606,7 @@ export function LandingPage() {
       <section id="inversion" className="investment">
         <div className="investment__image">
           <Image
-            src="/images/investment.png"
+            src="/images/investment-optimized.jpg"
             alt="Conjunto de casas modulares para inversión y Airbnb"
             fill
             sizes="100vw"
