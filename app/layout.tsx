@@ -8,13 +8,21 @@ import "@fontsource/playfair-display/600.css";
 import "./globals.css";
 import "./catalog.css";
 
-const siteUrl = "https://concrebox.vercel.app";
+const siteUrl = "https://concreboxpty.com";
+const siteName = "CONCREBOX PTY";
+const ogImage = "/images/og-concrebox.jpg";
+const title = "CONCREBOX PTY | Casas modulares personalizadas en Panamá";
+const description =
+  "Diseñamos y fabricamos casas modulares personalizadas, transportables y eficientes en Panamá. Soluciones modernas para vivienda, Airbnb, fincas e inversión inmobiliaria.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "CONCREBOX PTY | Casas modulares en Panamá",
-  description:
-    "Diseñamos y fabricamos casas modulares personalizadas, transportables y eficientes en Panamá. Viviendas, Airbnb e inversión inmobiliaria.",
+  applicationName: siteName,
+  title: {
+    default: title,
+    template: `%s | ${siteName}`,
+  },
+  description,
   keywords: [
     "casas modulares panama",
     "casas prefabricadas panama",
@@ -22,36 +30,69 @@ export const metadata: Metadata = {
     "construccion modular panama",
     "casas airbnb panama",
     "modular homes panama",
+    "concrebox pty",
+    "portable building service panama",
+    "casas modulares personalizadas",
+    "viviendas modulares panama",
+    "inversion inmobiliaria panama",
   ],
+  authors: [{ name: siteName, url: siteUrl }],
+  creator: siteName,
+  publisher: siteName,
+  category: "Construcción modular",
+  classification: "Portable Building Service",
   openGraph: {
-    title: "CONCREBOX PTY | Arquitectura modular sin límites",
-    description:
-      "Casas modulares personalizadas, fabricadas en planta e instaladas en tu terreno.",
+    title,
+    description,
     url: siteUrl,
-    siteName: "CONCREBOX PTY",
+    siteName,
     locale: "es_PA",
     type: "website",
     images: [
       {
-        url: "/images/hero.png",
-        width: 1600,
-        height: 900,
-        alt: "Casa modular contemporánea CONCREBOX en Panamá",
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: "CONCREBOX PTY - Casas modulares personalizadas en Panamá",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CONCREBOX PTY | Casas modulares en Panamá",
-    description:
-      "Arquitectura modular personalizada para vivir, vacacionar o invertir.",
-    images: ["/images/hero.png"],
+    title,
+    description,
+    images: [ogImage],
   },
   alternates: {
     canonical: siteUrl,
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
+  other: {
+    "og:image:secure_url": `${siteUrl}${ogImage}`,
+    "og:phone_number": "+50768272867",
+    "og:email": "concreboxpty@hotmail.com",
+    "business:contact_data:locality": "Panama City",
+    "business:contact_data:country_name": "Panamá",
+    "business:contact_data:phone_number": "+50768272867",
+    "business:contact_data:email": "concreboxpty@hotmail.com",
+    "geo.region": "PA-8",
+    "geo.placename": "Panama City, Panamá",
+    "theme-color": "#0D0D0D",
   },
 };
 
@@ -64,16 +105,20 @@ export const viewport: Viewport = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
-  name: "CONCREBOX PTY",
-  description:
-    "Diseño y fabricación de casas modulares personalizadas y transportables en Panamá.",
+  name: siteName,
+  legalName: "CONCREBOX PTY",
+  description,
   url: siteUrl,
+  image: `${siteUrl}${ogImage}`,
+  logo: `${siteUrl}/favicon.svg`,
   telephone: "+50768272867",
   email: "concreboxpty@hotmail.com",
+  priceRange: "$$",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Parque Industrial Tocumen Storage",
     addressLocality: "Panama City",
+    addressRegion: "Panamá",
     addressCountry: "PA",
   },
   areaServed: {
@@ -92,6 +137,24 @@ const localBusinessSchema = {
       contactType: "WhatsApp",
       areaServed: "PA",
       availableLanguage: ["es", "en"],
+    },
+  ],
+  makesOffer: [
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Casas modulares personalizadas",
+        serviceType: "Construcción modular",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Soluciones modulares para Airbnb e inversión inmobiliaria",
+        serviceType: "Portable Building Service",
+      },
     },
   ],
 };

@@ -4,7 +4,7 @@ Landing page premium para **CONCREBOX PTY**, empresa panameña especializada en 
 
 El sitio presenta sus modelos, beneficios, sistema constructivo, proceso de trabajo y oportunidades de inversión mediante una experiencia visual moderna, responsive y orientada a generar prospectos por WhatsApp.
 
-[Ver sitio en producción](https://concrebox.vercel.app/)
+[Ver sitio en producción](https://concreboxpty.com/)
 
 ![Vista principal de CONCREBOX PTY](public/images/hero.png)
 
@@ -71,7 +71,8 @@ Cada modelo puede abrirse en un modal responsive que ofrece:
 - CSS personalizado
 - [Framer Motion](https://motion.dev/)
 - [Lucide Icons](https://lucide.dev/)
-- [Vercel](https://vercel.com/) para despliegue
+- GitHub Actions para despliegue automático
+- Hostinger Single Web Hosting como alojamiento de producción
 
 ## Instalación local
 
@@ -85,13 +86,13 @@ Cada modelo puede abrirse en un modal responsive que ofrece:
 Clona el repositorio:
 
 ```bash
-git clone https://github.com/dhc0510/concrebox-landing-page.git
+git clone https://github.com/dhc0510/concrebox.git
 ```
 
 Entra al proyecto:
 
 ```bash
-cd concrebox-landing-page
+cd concrebox
 ```
 
 Instala las dependencias:
@@ -117,14 +118,14 @@ El catálogo puede abrirse directamente desde:
 | Comando | Descripción |
 | --- | --- |
 | `npm run dev` | Ejecuta el proyecto en modo desarrollo. |
-| `npm run build` | Genera una compilación optimizada para producción. |
-| `npm run start` | Ejecuta localmente la compilación de producción. |
+| `npm run build` | Genera la versión estática optimizada en la carpeta `out/`. |
+| `npm run start` | Ejecuta una compilación de producción en entornos Node compatibles. |
 | `npm run lint` | Analiza el código con ESLint. |
 
 ## Estructura principal
 
 ```text
-concrebox-landing-page/
+concrebox/
 ├── app/
 │   ├── catalog.css
 │   ├── globals.css
@@ -177,19 +178,50 @@ La landing incluye:
 
 - Título y descripción optimizados.
 - Palabras clave relacionadas con construcción modular en Panamá.
-- Open Graph para compartir el sitio en redes sociales.
+- Open Graph para compartir el sitio en WhatsApp, Facebook y redes sociales.
 - Twitter Card.
 - URL canónica.
 - Schema `HomeAndConstructionBusiness` mediante JSON-LD.
+- Imagen social dedicada `public/images/og-concrebox.jpg`.
+- `robots.txt` y `sitemap.xml`.
 
 ## Despliegue
 
-El proyecto está preparado para desplegarse directamente en Vercel:
+El proyecto está desplegado en:
 
-1. Importa el repositorio desde GitHub.
-2. Vercel detectará automáticamente Next.js.
-3. Conserva la configuración predeterminada.
-4. Selecciona **Deploy**.
+[https://concreboxpty.com/](https://concreboxpty.com/)
+
+El deploy se ejecuta automáticamente desde GitHub Actions cada vez que se hace push a la rama `main`.
+
+Flujo de publicación:
+
+```text
+GitHub main
+→ GitHub Actions
+→ npm ci
+→ npm run build
+→ carpeta out/
+→ Hostinger public_html
+```
+
+El proyecto usa `output: "export"` en `next.config.ts`, por lo que Next.js genera archivos estáticos listos para alojamiento compartido.
+
+### Secrets requeridos en GitHub Actions
+
+El workflow `.github/workflows/deploy-hostinger.yml` usa estos secrets:
+
+```text
+HOSTINGER_FTP_SERVER
+HOSTINGER_FTP_USERNAME
+HOSTINGER_FTP_PASSWORD
+HOSTINGER_FTP_DIR
+```
+
+Directorio de producción en Hostinger:
+
+```text
+/domains/concreboxpty.com/public_html/
+```
 
 No se requieren variables de entorno para ejecutar la versión actual.
 
