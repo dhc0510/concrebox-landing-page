@@ -86,13 +86,13 @@ Cada modelo puede abrirse en un modal responsive que ofrece:
 Clona el repositorio:
 
 ```bash
-git clone https://github.com/dhc0510/concrebox.git
+git clone https://github.com/dhc0510/concrebox-landing-page.git
 ```
 
 Entra al proyecto:
 
 ```bash
-cd concrebox
+cd concrebox-landing-page
 ```
 
 Instala las dependencias:
@@ -125,7 +125,7 @@ El catálogo puede abrirse directamente desde:
 ## Estructura principal
 
 ```text
-concrebox/
+concrebox-landing-page/
 ├── app/
 │   ├── catalog.css
 │   ├── globals.css
