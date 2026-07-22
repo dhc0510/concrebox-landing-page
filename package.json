@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "docs:sync": "node scripts/docs-tools.mjs sync",
+    "docs:check": "node scripts/docs-tools.mjs check",
+    "docs:status": "node scripts/docs-tools.mjs status",
+    "docs:watch": "node scripts/docs-tools.mjs watch",
+    "docs:hook": "node scripts/docs-tools.mjs hook"
   },
   "dependencies": {
     "@fontsource/manrope": "latest",
