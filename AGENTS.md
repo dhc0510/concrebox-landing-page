@@ -22,7 +22,7 @@ Después de cualquier cambio material:
 1. Identifica la documentación afectada usando el mapeo de [docs/00_PROJECT_INDEX.md](docs/00_PROJECT_INDEX.md).
 2. Ejecuta `npm run docs:sync`.
 3. Actualiza manualmente los documentos que requieran criterio.
-4. Ejecuta las validaciones de la aplicación relacionadas con el cambio.
+4. Ejecuta las validaciones de la aplicación y seguridad relacionadas con el cambio.
 5. Ejecuta `npm run docs:check`.
 6. No marques la tarea como completa si la documentación relevante quedó desactualizada.
 
@@ -43,6 +43,9 @@ Cuando una unidad funcional coherente esté completa, probada y documentada, cre
 - `npm run docs:status`: mapea cambios actuales o staged a documentos posiblemente afectados.
 - `npm run docs:watch`: observa rutas relevantes y ejecuta sincronización/validación con debounce.
 - `npm run docs:hook`: comando usado por `.githooks/pre-commit`.
+- `npm run security:check`: valida controles estáticos esenciales de seguridad.
+- `npm run security:headers`: valida headers esperados en `public/.htaccess`.
+- `npm run security:audit-deps`: audita dependencias de producción.
 
 ## Hook versionado
 
@@ -58,7 +61,7 @@ Para desactivarlo localmente:
 git config --local --unset core.hooksPath
 ```
 
-El hook no agrega archivos automáticamente. Si `docs:sync` modifica documentación, el commit se detiene para revisar y staged los archivos correctos.
+El hook no agrega archivos automáticamente. Si `docs:sync` modifica documentación o `security:check` falla, el commit se detiene para revisar y staged los archivos correctos.
 
 ## Entrega final
 

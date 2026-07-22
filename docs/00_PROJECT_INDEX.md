@@ -23,6 +23,7 @@ Contenido administrado automáticamente. No editar dentro de los marcadores.
 - [05_COMMANDS.md](05_COMMANDS.md)
 - [06_DECISIONS.md](06_DECISIONS.md)
 - [07_TASK_CONTEXT_TEMPLATE.md](07_TASK_CONTEXT_TEMPLATE.md)
+- [SECURITY.md](SECURITY.md)
 <!-- AUTO-GENERATED:END documentos -->
 
 ## Cuándo consultar cada documento

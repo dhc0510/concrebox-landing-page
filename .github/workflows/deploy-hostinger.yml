@@ -31,6 +31,12 @@ jobs:
       - name: Check documentation
         run: npm run docs:check
 
+      - name: Check security controls
+        run: npm run security:check
+
+      - name: Audit dependencies
+        run: npm run security:audit-deps
+
       - name: Build static site
         run: npm run build
 

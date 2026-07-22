@@ -11,7 +11,11 @@
     "docs:check": "node scripts/docs-tools.mjs check",
     "docs:status": "node scripts/docs-tools.mjs status",
     "docs:watch": "node scripts/docs-tools.mjs watch",
-    "docs:hook": "node scripts/docs-tools.mjs hook"
+    "docs:hook": "node scripts/docs-tools.mjs hook",
+    "security:check": "node scripts/security-check.mjs check",
+    "security:test": "npm run security:check",
+    "security:headers": "node scripts/security-check.mjs headers",
+    "security:audit-deps": "npm audit --omit=dev --audit-level=moderate"
   },
   "dependencies": {
     "@fontsource/manrope": "latest",
@@ -33,6 +37,7 @@
     "typescript": "latest"
   },
   "overrides": {
-    "postcss": "8.5.15"
+    "postcss": "8.5.25",
+    "sharp": "0.35.3"
   }
 }

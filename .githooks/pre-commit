@@ -2,3 +2,4 @@
 set -e
 
 npm run docs:hook
+npm run security:check

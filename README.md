@@ -121,6 +121,9 @@ El catálogo puede abrirse directamente desde:
 | `npm run build` | Genera la versión estática optimizada en la carpeta `out/`. |
 | `npm run start` | Ejecuta una compilación de producción en entornos Node compatibles. |
 | `npm run lint` | Analiza el código con ESLint. |
+| `npm run security:check` | Verifica controles estáticos esenciales de seguridad. |
+| `npm run security:headers` | Verifica la configuración de headers en `public/.htaccess`. |
+| `npm run security:audit-deps` | Audita dependencias de producción. |
 
 ## Estructura principal
 

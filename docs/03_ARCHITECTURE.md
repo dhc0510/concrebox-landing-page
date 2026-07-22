@@ -16,6 +16,8 @@ Aplicación frontend en Next.js con App Router, React, TypeScript, Tailwind CSS,
 - `components/Reveal.tsx`: animaciones de aparición.
 - `data/catalog.ts`: datos editables de modelos.
 - `public/`: imágenes, favicon, robots y sitemap.
+- `public/.htaccess`: redirección HTTPS y headers de seguridad para Hostinger/Apache.
+- `scripts/security-check.mjs`: validaciones deterministas de seguridad estática.
 
 ## Flujo principal
 
@@ -42,7 +44,7 @@ No aplica en el alcance actual.
 ## Infraestructura y despliegue
 
 - `next.config.ts` usa `output: "export"` e imágenes sin optimización remota para generar sitio estático.
-- `.github/workflows/deploy-hostinger.yml` ejecuta `npm ci`, validación documental, build y deploy FTP.
+- `.github/workflows/deploy-hostinger.yml` ejecuta `npm ci`, validación documental, validación de seguridad, audit de dependencias de producción, build y deploy FTP.
 - Producción se sirve desde `/domains/concreboxpty.com/public_html/` en Hostinger.
 
 ## Seguridad
@@ -50,6 +52,9 @@ No aplica en el alcance actual.
 - No se versionan secretos FTP; se usan GitHub Actions secrets.
 - No hay archivos `.env` requeridos para la versión actual.
 - Links externos deben usar prácticas seguras cuando abran nueva pestaña.
+- `.gitignore` ignora `.env` y `.env.*`.
+- `public/.htaccess` configura HSTS, CSP, frame-ancestors, X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy y deshabilita listado de directorios.
+- `npm run security:check` valida sinks DOM peligrosos, enlaces `target="_blank"`, headers esperados, URLs no HTTPS no permitidas, secretos obvios y presencia de checks en CI.
 
 ## Dependencias importantes
 

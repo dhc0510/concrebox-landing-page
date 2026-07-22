@@ -10,6 +10,7 @@ Estado vigente del proyecto. Mantener breve y orientado a lo que funciona hoy.
 - Catálogo de modelos con filtros, cards, slider por modelo y modal/lightbox.
 - CTAs hacia WhatsApp.
 - Metadatos SEO/sociales, `robots.txt`, `sitemap.xml` y JSON-LD.
+- Base de seguridad para sitio estático: headers en `.htaccess`, checks `security:*`, audit de dependencias de producción y documentación en `docs/SECURITY.md`.
 - Deploy automático a Hostinger desde GitHub Actions cuando se hace push a `main`.
 - Sistema de documentación continua en `docs/` con `AGENTS.md`, scripts `docs:*`, hook versionado y validación en CI.
 
@@ -28,13 +29,16 @@ Estado vigente del proyecto. Mantener breve y orientado a lo que funciona hoy.
 - Las plataformas sociales pueden cachear Open Graph; un preview viejo no siempre indica metadata incorrecta.
 - Hostinger depende de secrets FTP en GitHub Actions; no deben documentarse valores sensibles.
 - `npm run start` no representa el modo de producción real en Hostinger Single, porque producción sirve archivos estáticos de `out/`.
+- `npm audit` completo mantiene un hallazgo dev-only por `brace-expansion` vía ESLint; producción pasa con `npm run security:audit-deps`.
+- Los headers están configurados en `.htaccess`, pero su presencia en producción debe verificarse con autorización para consultar el dominio.
 
 ## Próximos pasos priorizados
 
 1. Activar el hook local solo con autorización del usuario.
-2. Usar `npm run docs:status` al iniciar tareas con cambios en el árbol.
-3. Definir si el proyecto necesita pruebas visuales o e2e.
+2. Verificar headers reales en producción con autorización del usuario.
+3. Usar `npm run docs:status` al iniciar tareas con cambios en el árbol.
+4. Definir si el proyecto necesita pruebas visuales o e2e.
 
 ## Última verificación relevante
 
-- Confirmado en esta tarea: `npm run docs:sync`, `npm run docs:check`, `npm run docs:status`, `npm run docs:hook`, arranque/detención de `npm run docs:watch`, `npm run build` y `npm run lint`.
+- Confirmado en esta tarea: `npm run security:check`, `npm run security:headers`, `npm run security:audit-deps`, `npm run docs:sync`, `npm run docs:check`, `npm run build` y `npm run lint`.

@@ -48,6 +48,20 @@ npm run docs:status
 npm run docs:watch
 ```
 
+## Seguridad
+
+```bash
+npm run security:check
+npm run security:test
+npm run security:headers
+npm run security:audit-deps
+```
+
+- `security:check`: validación local determinista de controles estáticos.
+- `security:test`: alias de `security:check`.
+- `security:headers`: valida la configuración de headers en `public/.htaccess`.
+- `security:audit-deps`: ejecuta `npm audit --omit=dev --audit-level=moderate`.
+
 ## Scripts detectados en package.json
 
 <!-- AUTO-GENERATED:START scripts-package-json -->
@@ -61,6 +75,10 @@ Contenido administrado automáticamente. No editar dentro de los marcadores.
 - `npm run docs:sync` → `node scripts/docs-tools.mjs sync`
 - `npm run docs:watch` → `node scripts/docs-tools.mjs watch`
 - `npm run lint` → `eslint .`
+- `npm run security:audit-deps` → `npm audit --omit=dev --audit-level=moderate`
+- `npm run security:check` → `node scripts/security-check.mjs check`
+- `npm run security:headers` → `node scripts/security-check.mjs headers`
+- `npm run security:test` → `npm run security:check`
 - `npm run start` → `next start`
 <!-- AUTO-GENERATED:END scripts-package-json -->
 
