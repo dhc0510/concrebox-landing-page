@@ -21,7 +21,7 @@ La aplicación y el artefacto estático pasaron las validaciones locales disponi
 - Sistema: Windows local.
 - Node/npm: validados mediante `npm ci`.
 - Artefacto: `out/` generado por `npm run build`.
-- Servidor local de producción: servidor estático Node apuntando a `out/` en `http://127.0.0.1:4173/`.
+- Servidor local de producción: servidor estático Node apuntando a `out/` en `127.0.0.1:4173`.
 - Navegador automatizado: Microsoft Edge headless instalado localmente.
 
 ## Matriz de resultados
@@ -59,13 +59,13 @@ npm run seo:check
 npm run docs:check
 ```
 
-También se sirvió `out/` localmente en `http://127.0.0.1:4173/` y se ejecutó un smoke headless con Edge.
+También se sirvió `out/` localmente en `127.0.0.1:4173` y se ejecutó un smoke headless con Edge.
 
 ## Evidencia funcional
 
 Smoke headless final:
 
-- URL: `http://127.0.0.1:4173/`
+- URL local: `127.0.0.1:4173`
 - Viewports: 320×900, 375×900, 768×1000, 1440×1000, 1920×1080.
 - Overflow horizontal: no detectado.
 - H1: 1.
@@ -124,7 +124,7 @@ Hallazgo informativo: `out/` incluye assets pesados no referenciados proveniente
 
 ## Próximos pasos recomendados
 
-1. Revisar visualmente la página local en `http://127.0.0.1:4173/`.
+1. Revisar visualmente la página local en `127.0.0.1:4173`.
 2. Si se aprueba visualmente, considerar limpieza/archivo fuera de `public/` de assets pesados no referenciados.
 3. Ejecutar push cuando se quiera activar GitHub Actions.
 4. Tras deploy, validar:
