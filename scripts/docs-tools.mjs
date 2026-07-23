@@ -10,6 +10,7 @@ const generatedWarning =
 
 const ignoredSegments = new Set([
   ".git",
+  ".agents",
   ".obsidian",
   "node_modules",
   ".next",

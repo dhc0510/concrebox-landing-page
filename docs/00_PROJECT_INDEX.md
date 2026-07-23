@@ -52,7 +52,6 @@ Contenido administrado automáticamente. No editar dentro de los marcadores.
 <!-- AUTO-GENERATED:START estructura-detectada -->
 Contenido administrado automáticamente. No editar dentro de los marcadores.
 
-- `.agents` — directorio
 - `.githooks` — directorio
 - `.github` — directorio
 - `.gitignore` — archivo
