@@ -379,6 +379,28 @@ const catalog2026Models: CatalogModel[] = [
     hasTerrace: true,
     compact: true,
   },
+  {
+    id: 9,
+    name: "Modelo Barva",
+    area: "Área abierta 21.01 m² + terraza 3.09 m²",
+    price: "B/. 24,274.00",
+    eyebrow: "A-Frame",
+    images: [
+      { src: "/images/catalog/2026/barva-fachada.jpg", label: "Fachada" },
+      { src: "/images/catalog/2026/barva-plano.png", label: "Plano" },
+    ],
+    features: [
+      "1 dormitorio",
+      "1 baño",
+      "Cocina concepto abierto",
+      "Terraza",
+    ],
+    description:
+      "Alojamiento tipo A-Frame compacto, cómodo y funcional, ideal para una o dos personas, con distribución pensada para aprovechar al máximo cada espacio.",
+    bedrooms: 1,
+    hasTerrace: true,
+    compact: true,
+  },
 ];
 
 export const catalogModels = catalog2025Models;
@@ -402,7 +424,7 @@ export const catalogCollections: Record<CatalogMode, CatalogCollection> = {
     title: "Modelos CONCREBOX",
     description:
       "Explora las propuestas del catálogo 2026 extraídas del documento oficial, con fachadas, planos, áreas, distribución y precio arquitectónico por modelo.",
-    countLabel: "08 modelos",
+    countLabel: "09 modelos",
     note: "Selecciona una imagen para verla en alta resolución y navegar entre fachada y plano del modelo activo.",
     models: catalog2026Models,
   },
@@ -413,7 +435,7 @@ export const catalogCollections: Record<CatalogMode, CatalogCollection> = {
     title: "Modelos CONCREBOX",
     description:
       "Explora en un solo lugar todos los modelos disponibles de los catálogos 2025 y 2026, con fachadas, planos, áreas, distribución y precios.",
-    countLabel: "17 modelos",
+    countLabel: "18 modelos",
     note: "Selecciona una imagen para verla en alta resolución. Los filtros trabajan sobre ambos catálogos a la vez.",
     models: [...catalog2025Models, ...catalog2026Models],
   },
