@@ -52,3 +52,7 @@ Contenido administrado automáticamente. No editar dentro de los marcadores.
 - `public/theme-init.js`: inicialización previa al pintado, persistencia y sincronización.
 - `app/theme.css`: tokens, superficies y controles de ambos modos.
 - `scripts/theme-check.mjs`: regresiones de preferencias y almacenamiento.
+
+## Navbar transparente — 2026-09-11
+
+Se recuperan los estilos originales del navbar en globals.css: transparente al inicio, línea inferior tenue y fondo oscuro translúcido con desenfoque al superar 36 px de scroll. Se conservan el selector día/noche, su espacio responsive y los demás cambios. El botón del tema usa un acabado transparente con texto blanco dentro del navbar.
