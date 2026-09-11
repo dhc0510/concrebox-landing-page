@@ -59,3 +59,7 @@
 - Usar tokens CSS de superficies y texto, conservando colores fijos sobre fotografías y CTAs.
 - Aplicar el tema mediante un pequeño script local síncrono antes del pintado para evitar destellos; persistir únicamente la preferencia visual.
 - Usar `useSyncExternalStore` para mantener el botón y la hidratación coherentes.
+
+## 2026-09-10 — Corregir auditoría de CI
+
+Actualizar dependencias vulnerables y conservar `security:audit-deps` como requisito de despliegue. El fallo remoto estaba en la auditoría, antes del build y FTP.

@@ -138,3 +138,7 @@ No ejecutar push sin autorización explícita del usuario.
 ## Verificación del tema
 
 - `node scripts/theme-check.mjs`: prueba tema del sistema, elección guardada, cambios, sincronización entre pestañas, valores inválidos y almacenamiento no disponible.
+
+## Actualización de seguridad — 2026-09-10
+
+Se verificaron build, lint, security:audit-deps (0 vulnerabilidades), security:check, seo:check, docs:check y los scripts de catálogo y tema después de actualizar las dependencias.

@@ -54,3 +54,9 @@ Estado vigente del proyecto. Mantener breve y orientado a lo que funciona hoy.
 ## Modo día y noche — 2026-09-10
 
 Selector disponible en escritorio y móvil, con preferencia persistente y tema inicial del sistema. Paletas completas para secciones, catálogo, navegación y visores, manteniendo los colores originales de las fotografías. Verificación detallada en [THEME_VERIFICATION.md](THEME_VERIFICATION.md).
+
+## Corrección del despliegue — 2026-09-10
+
+La ejecución 34551396726 falló en Audit dependencies antes de compilar o desplegar. Se actualizan Next.js y eslint-config-next a 16.3.4, sharp a 0.35.4 y las dependencias transitivas afectadas; se conserva la auditoría obligatoria.
+
+Validación local de la corrección: build, lint, security:check, auditoría de producción (0 vulnerabilidades), pruebas de catálogo y tema, SEO y docs:check correctos.

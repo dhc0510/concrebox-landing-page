@@ -78,3 +78,7 @@ No aplica en el alcance actual.
 
 - Pendiente de confirmar: estrategia de pruebas automatizadas.
 - Pendiente de confirmar: monitoreo o analítica de producción.
+
+## Mantenimiento de dependencias
+
+Next.js y eslint-config-next usan la rama compatible 16.3.4; el override de sharp es 0.35.4. El lockfile registra las correcciones de seguridad sin modificar la arquitectura estática.

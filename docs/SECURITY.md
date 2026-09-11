@@ -96,3 +96,9 @@ npm run docs:check
 No aplica dentro de este repositorio: SQL/NoSQL Injection, autenticación, sesiones, autorización, CSRF, CORS, rate limit propio, carga de archivos, SSRF, API Security, GraphQL, WebSocket y multi-tenancy.
 
 Si se agrega backend, formularios procesados por servidor, base de datos o autenticación, este documento debe revisarse antes de publicar.
+
+## Auditoría de CI — 2026-09-10
+
+La ejecución 34551396726 detectó avisos en Next.js, sharp, nanoid y baseline-browser-mapping. Se actualizan las versiones afectadas y se mantiene el umbral moderate de producción.
+
+Validación local de la corrección: build, lint, security:check, auditoría de producción (0 vulnerabilidades), pruebas de catálogo y tema, SEO y docs:check correctos.
