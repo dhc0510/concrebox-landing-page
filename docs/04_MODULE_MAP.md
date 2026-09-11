@@ -52,7 +52,3 @@ Contenido administrado automáticamente. No editar dentro de los marcadores.
 - `public/theme-init.js`: inicialización previa al pintado, persistencia y sincronización.
 - `app/theme.css`: tokens, superficies y controles de ambos modos.
 - `scripts/theme-check.mjs`: regresiones de preferencias y almacenamiento.
-
-## Transición de tema — 2026-09-11
-
-Cambio de colores y superficies en 260 ms con ease-in-out. `theme-init.js` activa un atributo temporal durante 320 ms y lo renueva ante cambios rápidos. La carga inicial aplica el tema directamente. Se respetan las preferencias de movimiento reducido; al terminar se restauran las transiciones de interacción existentes. Fotografías y dimensiones no se animan.
