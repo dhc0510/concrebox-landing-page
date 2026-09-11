@@ -2,8 +2,17 @@
   var key = 'concrebox-theme';
   var media = window.matchMedia('(prefers-color-scheme: dark)');
   var preference = null;
+  var transitionTimer;
   try { preference = localStorage.getItem(key); } catch { /* Storage can be unavailable. */ }
   function apply(value) {
+    var root = document.documentElement;
+    if (root.dataset.theme && root.dataset.theme !== value) {
+      clearTimeout(transitionTimer);
+      root.dataset.themeTransition = 'true';
+      transitionTimer = setTimeout(function () {
+        delete root.dataset.themeTransition;
+      }, 320);
+    }
     document.documentElement.dataset.theme = value;
     var meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.content = value === 'dark' ? '#111310' : '#f8f8f6';

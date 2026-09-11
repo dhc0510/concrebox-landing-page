@@ -86,3 +86,7 @@ Next.js y eslint-config-next usan la rama compatible 16.3.4; el override de shar
 ## Recuperación FTP — 2026-09-10
 
 La ejecución 34551706055 pasó todos los controles y falló al reemplazar `404/index.html` (FTP 550: ruta inexistente). Se usa `.ftp-deploy-sync-state-v2.json` para reconstruir el seguimiento remoto y crear de nuevo los directorios del export. Se mantiene este nombre en despliegues posteriores; no se activa borrado total. Los archivos históricos fuera del nuevo inventario permanecen en el servidor.
+
+## Transición de tema — 2026-09-11
+
+Cambio de colores y superficies en 260 ms con ease-in-out. `theme-init.js` activa un atributo temporal durante 320 ms y lo renueva ante cambios rápidos. La carga inicial aplica el tema directamente. Se respetan las preferencias de movimiento reducido; al terminar se restauran las transiciones de interacción existentes. Fotografías y dimensiones no se animan.

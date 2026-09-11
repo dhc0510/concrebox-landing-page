@@ -12,7 +12,7 @@ function boot(saved, systemDark = false, denied = false) {
   const meta = {};
   const storage = new Map([['concrebox-theme', saved]]);
   vm.runInNewContext(source, {
-    window, Event,
+    window, Event, setTimeout, clearTimeout,
     document: { documentElement: root, querySelector: () => meta },
     localStorage: {
       getItem: key => { if (denied) throw Error('denied'); return storage.get(key); },
@@ -38,7 +38,9 @@ for (const saved of ['light', 'dark']) {
   assert.equal(page.root.dataset.theme, saved);
 }
 const page = boot(null);
+assert.equal(page.root.dataset.themeTransition, undefined, 'No animation on initial load');
 page.send('concrebox-theme-select', { detail: 'dark' });
+assert.equal(page.root.dataset.themeTransition, 'true');
 assert.equal(page.root.dataset.theme, 'dark');
 assert.equal(page.storage.get('concrebox-theme'), 'dark');
 assert.equal(page.meta.content, '#111310');
@@ -56,3 +58,5 @@ denied.send('concrebox-theme-select', { detail: 'light' });
 assert.equal(denied.root.dataset.theme, 'light');
 assert.equal(boot('invalid', true).root.dataset.theme, 'dark');
 console.log('Theme checks passed: system preference, persistence, selection, cross-tab sync, invalid values and unavailable storage.');
+await new Promise(resolve => setTimeout(resolve, 350));
+assert.equal(page.root.dataset.themeTransition, undefined, 'Restore normal transitions after switching');
