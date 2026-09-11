@@ -63,3 +63,7 @@
 ## 2026-09-10 — Corregir auditoría de CI
 
 Actualizar dependencias vulnerables y conservar `security:audit-deps` como requisito de despliegue. El fallo remoto estaba en la auditoría, antes del build y FTP.
+
+## Recuperación FTP — 2026-09-10
+
+La ejecución 34551706055 pasó todos los controles y falló al reemplazar `404/index.html` (FTP 550: ruta inexistente). Se usa `.ftp-deploy-sync-state-v2.json` para reconstruir el seguimiento remoto y crear de nuevo los directorios del export. Se mantiene este nombre en despliegues posteriores; no se activa borrado total. Los archivos históricos fuera del nuevo inventario permanecen en el servidor.

@@ -49,5 +49,7 @@ jobs:
           server: ${{ secrets.HOSTINGER_FTP_SERVER }}
           username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          # Rebuild tracking after the remote 404 directory drifted from saved state.
+          state-name: .ftp-deploy-sync-state-v2.json
           local-dir: ./out/
           server-dir: ${{ secrets.HOSTINGER_FTP_DIR }}

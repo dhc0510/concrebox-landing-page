@@ -82,3 +82,7 @@ No aplica en el alcance actual.
 ## Mantenimiento de dependencias
 
 Next.js y eslint-config-next usan la rama compatible 16.3.4; el override de sharp es 0.35.4. El lockfile registra las correcciones de seguridad sin modificar la arquitectura estática.
+
+## Recuperación FTP — 2026-09-10
+
+La ejecución 34551706055 pasó todos los controles y falló al reemplazar `404/index.html` (FTP 550: ruta inexistente). Se usa `.ftp-deploy-sync-state-v2.json` para reconstruir el seguimiento remoto y crear de nuevo los directorios del export. Se mantiene este nombre en despliegues posteriores; no se activa borrado total. Los archivos históricos fuera del nuevo inventario permanecen en el servidor.

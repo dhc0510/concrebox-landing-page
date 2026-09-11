@@ -60,3 +60,7 @@ Selector disponible en escritorio y móvil, con preferencia persistente y tema i
 La ejecución 34551396726 falló en Audit dependencies antes de compilar o desplegar. Se actualizan Next.js y eslint-config-next a 16.3.4, sharp a 0.35.4 y las dependencias transitivas afectadas; se conserva la auditoría obligatoria.
 
 Validación local de la corrección: build, lint, security:check, auditoría de producción (0 vulnerabilidades), pruebas de catálogo y tema, SEO y docs:check correctos.
+
+## Recuperación FTP — 2026-09-10
+
+La ejecución 34551706055 pasó todos los controles y falló al reemplazar `404/index.html` (FTP 550: ruta inexistente). Se usa `.ftp-deploy-sync-state-v2.json` para reconstruir el seguimiento remoto y crear de nuevo los directorios del export. Se mantiene este nombre en despliegues posteriores; no se activa borrado total. Los archivos históricos fuera del nuevo inventario permanecen en el servidor.
