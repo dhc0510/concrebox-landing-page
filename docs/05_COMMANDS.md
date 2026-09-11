@@ -130,3 +130,7 @@ git config --local --unset core.hooksPath
 El despliegue automático ocurre en GitHub Actions al hacer push a `main`.
 
 No ejecutar push sin autorización explícita del usuario.
+
+## Verificación del catálogo
+
+- Ejecutar `node scripts/catalog-check.mjs` para cotejar las 14 fichas y sus archivos contra la tabla transcrita del PDF en `docs/CATALOG_VERIFICATION.md`.

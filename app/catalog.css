@@ -275,7 +275,8 @@
 .catalog-card__media {
   position: relative;
   width: 100%;
-  height: 370px;
+  aspect-ratio: 16 / 10;
+  height: auto;
   overflow: hidden;
   background: #9aa5aa;
 }
@@ -776,6 +777,7 @@
 
 .model-modal__thumbnails {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -860,7 +862,7 @@
   }
 
   .catalog-card__media {
-    height: 400px;
+    height: auto;
   }
 }
 
@@ -941,7 +943,7 @@
   }
 
   .catalog-card__media {
-    height: min(470px, 118vw);
+    height: auto;
   }
 
   .catalog-card__content {

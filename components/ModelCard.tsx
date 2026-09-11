@@ -55,16 +55,15 @@ export function ModelCard({
           image.label === "Plano" ? "is-plan" : ""
         }`}
       >
-        {model.images.map((item, index) => (
-          <Image
-            key={item.src}
-            src={item.src}
-            alt={`${item.label} de ${model.name}`}
-            fill
-            sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"
-            className={activeImage === index ? "is-active" : ""}
-          />
-        ))}
+        <Image
+          key={image.src}
+          src={image.src}
+          alt={`${image.label} de ${model.name}, vista ${activeImage + 1}`}
+          fill
+          loading="lazy"
+          sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"
+          className="is-active"
+        />
 
         <button
           type="button"
@@ -100,7 +99,7 @@ export function ModelCard({
                 type="button"
                 className={activeImage === index ? "is-active" : ""}
                 onClick={() => setActiveImage(index)}
-                aria-label={`Ver ${item.label.toLowerCase()} de ${model.name}`}
+                aria-label={`Ver ${item.label.toLowerCase()} ${index + 1} de ${model.name}`}
               />
             ))}
           </div>

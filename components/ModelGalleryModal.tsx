@@ -112,7 +112,7 @@ export function ModelGalleryModal({
               }`}
             >
               <Image
-                src={model.images[activeImage].src}
+                src={model.images[activeImage].fullSrc}
                 alt={`${model.images[activeImage].label} de ${model.name}`}
                 fill
                 priority
@@ -151,11 +151,11 @@ export function ModelGalleryModal({
                     type="button"
                     className={activeImage === index ? "is-active" : ""}
                     onClick={() => setActiveImage(index)}
-                    aria-label={`Ver ${image.label.toLowerCase()}`}
+                    aria-label={`Ver ${image.label.toLowerCase()} ${index + 1}`}
                   >
                     <span>
                       <Image
-                        src={image.src}
+                        src={image.thumbnailSrc}
                         alt=""
                         fill
                         sizes="120px"

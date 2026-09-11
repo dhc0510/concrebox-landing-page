@@ -47,3 +47,9 @@
 - Contexto: las imágenes PNG principales pesaban entre 2.2 MB y 2.9 MB cada una.
 - Motivo: reducir peso de carga manteniendo la calidad visual premium de la landing.
 - Consecuencias: los PNG originales permanecen en `public/images/` como referencia histórica, pero la landing usa las variantes optimizadas.
+
+## 2026-09-10 — Catálogo verificado y carga de imágenes por vista
+
+- Sustituir los catálogos anteriores por las 14 fichas del PDF aportado, sin selector de año.
+- Extraer originales; usar WebP, planos completos sin pérdida y variantes ligeras. Montar solo la imagen activa para evitar descargas ocultas.
+- Mantener trazabilidad de páginas, valores y criterios en [CATALOG_VERIFICATION.md](CATALOG_VERIFICATION.md).

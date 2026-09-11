@@ -90,6 +90,14 @@ El workflow `.github/workflows/deploy-hostinger.yml` ejecuta `npm run seo:check`
 ## Riesgos y próximos pasos
 
 - WhatsApp, Facebook y otras plataformas pueden cachear previews antiguos aunque la metadata ya esté correcta.
-- El catálogo usa varios planos arquitectónicos pesados; son útiles para detalle visual, pero conviene evaluar versiones comprimidas específicas para web.
+- El catálogo usa variantes WebP ligeras y planos completos sin pérdida bajo demanda; los assets históricos sin uso todavía aumentan el tamaño del deploy.
 - Pendiente recomendado: validar producción con PageSpeed Insights, Rich Results Test y Facebook Sharing Debugger después del próximo deploy.
 - Pendiente opcional: limpiar assets grandes no referenciados si el usuario confirma que no se necesitan.
+
+## Catálogo actualizado (2026-09-10)
+
+- Las 14 fachadas iniciales suman 1.88 MiB; carga diferida y una sola imagen montada por tarjeta.
+- Las 34 vistas completas suman 11.89 MiB y solo se solicitan individualmente al abrir la galería. Los 14 planos conservan exactamente los píxeles originales con WebP sin pérdida.
+- Las vistas de tarjeta miden hasta 960 px; las miniaturas hasta 240 px. Las imágenes completas conservan su resolución original.
+- Se mantiene el diseño responsive y se ajusta la proporción de las fotos a 16:10; la galería permite distribuir las miniaturas en varias filas.
+- La medición anterior de 30.25 MB corresponde al catálogo previo y no describe la carga inicial vigente. Los archivos históricos siguen almacenados pero no se referencian desde el catálogo.

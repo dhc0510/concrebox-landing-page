@@ -24,7 +24,7 @@ Presentar a CONCREBOX PTY como una empresa premium de construcción modular en P
 
 - Navegación por secciones internas.
 - CTAs externos a WhatsApp.
-- Catálogo con filtros por tipo de modelo.
+- Catálogo con todos los modelos juntos, sin filtro ni selector por año; conserva búsqueda, filtros por tipo de modelo, dormitorios, amenidades y precio, y ordenamiento.
 - Slider de fachada/plano por modelo.
 - Modal de imagen con navegación.
 - Diseño responsive mobile-first.
@@ -62,3 +62,8 @@ Presentar a CONCREBOX PTY como una empresa premium de construcción modular en P
 - Si CONCREBOX trabajará formalmente fuera de Panamá y cómo debe comunicarse.
 - Si el catálogo requiere precios, fichas técnicas descargables o formularios dedicados.
 - Si se implementarán pruebas automatizadas visuales o e2e.
+
+## Catálogo vigente
+
+- Usar los 14 modelos del PDF aportado, con datos y correspondencia de imágenes verificados en [CATALOG_VERIFICATION.md](CATALOG_VERIFICATION.md).
+- Mantener planos nítidos y fotos originales mediante variantes optimizadas para tarjetas, miniaturas y galería.

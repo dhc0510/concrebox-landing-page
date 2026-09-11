@@ -7,7 +7,7 @@ Estado vigente del proyecto. Mantener breve y orientado a lo que funciona hoy.
 - Landing page en Next.js con exportación estática.
 - Diseño responsive premium para CONCREBOX PTY.
 - Navbar, hero, beneficios, sistema constructivo, catálogo, proceso, inversión, galería, testimonios, FAQ, contacto y footer.
-- Catálogo de modelos con filtros, cards, slider por modelo y modal/lightbox.
+- Catálogo unificado con los 14 modelos del PDF verificado visibles inicialmente, sin selector de año. Conserva búsqueda, filtros por tipo, dormitorios, amenidades y precio, ordenamiento, cards, slider y modal/lightbox.
 - CTAs hacia WhatsApp.
 - Metadatos SEO/sociales, canonical de producción, `robots.txt`, `sitemap.xml`, JSON-LD y checks `seo:*`.
 - Imágenes principales de la landing optimizadas en JPG para reducir peso sin cambiar la dirección visual.
@@ -25,7 +25,7 @@ Estado vigente del proyecto. Mantener breve y orientado a lo que funciona hoy.
 - Activar localmente el hook con `git config --local core.hooksPath .githooks` si el usuario lo aprueba.
 - Confirmar manualmente previews sociales después de que WhatsApp/Facebook refresquen caché.
 - Validar PageSpeed Insights y Rich Results Test tras el próximo deploy.
-- Evaluar compresión web de planos del catálogo si el rendimiento móvil lo requiere.
+- Catálogo revisado contra el PDF: ver `docs/CATALOG_VERIFICATION.md`; planos WebP sin pérdida y fotos optimizadas.
 - Pendiente de confirmar: agregar pruebas automatizadas visuales o e2e si el proyecto lo requiere.
 
 ## Bloqueos y riesgos conocidos
@@ -47,3 +47,6 @@ Estado vigente del proyecto. Mantener breve y orientado a lo que funciona hoy.
 ## Última verificación relevante
 
 - Confirmado en esta tarea: `npm ci`, `npm run build`, `npm run lint`, `npm audit --audit-level=moderate`, `npm run security:audit-deps`, `npm run security:check`, `npm run security:headers`, `npm run seo:check`, `npm run seo:links`, `npm run seo:assets`, `npm run seo:build`, `npm run seo:sitemap`, `npm run docs:check` y smoke headless con Edge contra `out/` servido localmente.
+
+- Catálogo 2026-09-10: build, lint, seguridad, SEO, docs y cotejo de 14 fichas; revisión visual de PDF completo, imágenes extraídas, escritorio y móvil. Validación píxel a píxel de 14 planos completos. Commit pendiente por identidad Git sin configurar.
+- Segunda revisión del catálogo: 14/14 fichas y 34/34 imágenes cotejadas de nuevo con el PDF; completadas las descripciones de circulación de Arenal y Poás.

@@ -24,7 +24,7 @@ Contenido administrado automáticamente. No editar dentro de los marcadores.
 | App shell | `app/layout.tsx` | Metadata, fuentes, estilos y schema | Metadata del negocio | Todo el sitio |
 | Página principal | `app/page.tsx` | Render de la landing | `LandingPage` | Next.js |
 | Landing | `components/LandingPage.tsx` | Secciones principales y CTAs | Imágenes públicas, copy del negocio | `app/page.tsx` |
-| Catálogo | `components/CatalogSection.tsx` | Filtros, resultados y modal | `catalogModels` | Landing |
+| Catálogo | `components/CatalogSection.tsx` | Catálogo unificado, filtros sin año, resultados y modal | `catalogCollection` | Landing |
 | Card de modelo | `components/ModelCard.tsx` | Presentación de cada modelo | `CatalogModel` | Catálogo |
 | Filtros | `components/ModelFilters.tsx` | UI de filtros | Estado de filtro | Catálogo |
 | Modal | `components/ModelGalleryModal.tsx` | Visualización ampliada | Modelo seleccionado | Catálogo |
@@ -42,3 +42,6 @@ Contenido administrado automáticamente. No editar dentro de los marcadores.
 
 - Evitar listar cada imagen individual salvo que la tarea sea de assets.
 - Para cambios de catálogo, empezar por `data/catalog.ts`, `CatalogSection.tsx`, `ModelCard.tsx` y `ModelGalleryModal.tsx`.
+
+- `scripts/catalog-check.mjs`: cotejo de datos y archivos de las 14 fichas contra la transcripción documental del PDF.
+- `docs/CATALOG_VERIFICATION.md`: fuente, páginas, precios, áreas y criterios de verificación del catálogo.

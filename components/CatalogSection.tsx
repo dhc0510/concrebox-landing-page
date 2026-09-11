@@ -4,8 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useMemo, useState } from "react";
 import {
-  catalogCollections,
-  type CatalogMode,
+  catalogCollection,
   type CatalogModel,
 } from "@/data/catalog";
 import { ModelCard } from "./ModelCard";
@@ -73,7 +72,6 @@ function modelHasAmenity(model: CatalogModel, amenity: CatalogAmenityFilter) {
 }
 
 export function CatalogSection() {
-  const [selectedCatalog, setSelectedCatalog] = useState<CatalogMode>("2025");
   const [filter, setFilter] = useState<CatalogFilter>("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [bedroomFilter, setBedroomFilter] =
@@ -84,7 +82,7 @@ export function CatalogSection() {
   const [sort, setSort] = useState<CatalogSort>("default");
   const [selectedModel, setSelectedModel] = useState<CatalogModel | null>(null);
   const [selectedImage, setSelectedImage] = useState(0);
-  const activeCatalog = catalogCollections[selectedCatalog];
+  const activeCatalog = catalogCollection;
 
   const priceCeiling = useMemo(
     () =>
@@ -159,13 +157,6 @@ export function CatalogSection() {
     sort !== "default" ||
     (priceCeiling > 0 && activeMaxPrice < priceCeiling);
 
-  const changeCatalog = (mode: CatalogMode) => {
-    setSelectedCatalog(mode);
-    resetFilters();
-    setSelectedModel(null);
-    setSelectedImage(0);
-  };
-
   const openGallery = (model: CatalogModel, imageIndex: number) => {
     setSelectedImage(imageIndex);
     setSelectedModel(model);
@@ -193,20 +184,6 @@ export function CatalogSection() {
             </div>
           </div>
 
-          <div className="catalog-switcher" aria-label="Seleccionar catálogo">
-            {(["2025", "2026", "complete"] as CatalogMode[]).map((mode) => (
-              <button
-                key={mode}
-                type="button"
-                className={selectedCatalog === mode ? "is-active" : ""}
-                aria-pressed={selectedCatalog === mode}
-                onClick={() => changeCatalog(mode)}
-              >
-                {catalogCollections[mode].label}
-              </button>
-            ))}
-          </div>
-
           <ModelFilters
             active={filter}
             onChange={setFilter}
@@ -231,7 +208,7 @@ export function CatalogSection() {
               {filteredModels.map((model, index) => (
                 <motion.div
                   layout
-                  key={`${selectedCatalog}-${model.id}-${model.name}`}
+                  key={`${model.id}-${model.name}`}
                   className="catalog-card"
                   initial={false}
                   animate={{ opacity: 1, y: 0 }}
