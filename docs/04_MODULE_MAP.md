@@ -45,3 +45,10 @@ Contenido administrado automáticamente. No editar dentro de los marcadores.
 
 - `scripts/catalog-check.mjs`: cotejo de datos y archivos de las 14 fichas contra la transcripción documental del PDF.
 - `docs/CATALOG_VERIFICATION.md`: fuente, páginas, precios, áreas y criterios de verificación del catálogo.
+
+## Tema visual
+
+- `components/ThemeToggle.tsx`: botón accesible y suscripción al tema.
+- `public/theme-init.js`: inicialización previa al pintado, persistencia y sincronización.
+- `app/theme.css`: tokens, superficies y controles de ambos modos.
+- `scripts/theme-check.mjs`: regresiones de preferencias y almacenamiento.

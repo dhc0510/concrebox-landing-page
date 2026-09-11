@@ -67,3 +67,9 @@ Presentar a CONCREBOX PTY como una empresa premium de construcción modular en P
 
 - Usar los 14 modelos del PDF aportado, con datos y correspondencia de imágenes verificados en [CATALOG_VERIFICATION.md](CATALOG_VERIFICATION.md).
 - Mantener planos nítidos y fotos originales mediante variantes optimizadas para tarjetas, miniaturas y galería.
+
+## Tema visual confirmado
+
+- Selector día/noche accesible en escritorio y móvil.
+- Recordar la elección; respetar el sistema cuando no existe preferencia.
+- Mantener legibilidad, diseño responsive, calidad de fotografías y filtros del catálogo en ambos modos.

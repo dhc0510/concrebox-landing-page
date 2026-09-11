@@ -48,5 +48,9 @@ Estado vigente del proyecto. Mantener breve y orientado a lo que funciona hoy.
 
 - Confirmado en esta tarea: `npm ci`, `npm run build`, `npm run lint`, `npm audit --audit-level=moderate`, `npm run security:audit-deps`, `npm run security:check`, `npm run security:headers`, `npm run seo:check`, `npm run seo:links`, `npm run seo:assets`, `npm run seo:build`, `npm run seo:sitemap`, `npm run docs:check` y smoke headless con Edge contra `out/` servido localmente.
 
-- Catálogo 2026-09-10: build, lint, seguridad, SEO, docs y cotejo de 14 fichas; revisión visual de PDF completo, imágenes extraídas, escritorio y móvil. Validación píxel a píxel de 14 planos completos. Commit pendiente por identidad Git sin configurar.
+- Catálogo 2026-09-10: build, lint, seguridad, SEO, docs y cotejo de 14 fichas; revisión visual de PDF completo, imágenes extraídas, escritorio y móvil. Validación píxel a píxel de 14 planos completos. Identidad Git local configurada con los datos autorizados; catálogo registrado en el commit `9767f26`.
 - Segunda revisión del catálogo: 14/14 fichas y 34/34 imágenes cotejadas de nuevo con el PDF; completadas las descripciones de circulación de Arenal y Poás.
+
+## Modo día y noche — 2026-09-10
+
+Selector disponible en escritorio y móvil, con preferencia persistente y tema inicial del sistema. Paletas completas para secciones, catálogo, navegación y visores, manteniendo los colores originales de las fotografías. Verificación detallada en [THEME_VERIFICATION.md](THEME_VERIFICATION.md).

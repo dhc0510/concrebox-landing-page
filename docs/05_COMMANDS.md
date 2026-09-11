@@ -134,3 +134,7 @@ No ejecutar push sin autorización explícita del usuario.
 ## Verificación del catálogo
 
 - Ejecutar `node scripts/catalog-check.mjs` para cotejar las 14 fichas y sus archivos contra la tabla transcrita del PDF en `docs/CATALOG_VERIFICATION.md`.
+
+## Verificación del tema
+
+- `node scripts/theme-check.mjs`: prueba tema del sistema, elección guardada, cambios, sincronización entre pestañas, valores inválidos y almacenamiento no disponible.

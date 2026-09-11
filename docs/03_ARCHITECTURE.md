@@ -29,7 +29,7 @@ Aplicación frontend en Next.js con App Router, React, TypeScript, Tailwind CSS,
 
 ## Persistencia
 
-No hay persistencia en la aplicación. Los datos del catálogo están versionados en `data/catalog.ts`.
+La preferencia visual se guarda en `localStorage` bajo `concrebox-theme`. Sin elección guardada se sigue el tema del sistema. `public/theme-init.js` aplica el tema antes del primer pintado, sincroniza pestañas y tolera almacenamiento bloqueado; `ThemeToggle` se suscribe mediante `useSyncExternalStore`. Los datos del catálogo siguen versionados en `data/catalog.ts`.
 
 ## Autenticación y autorización
 

@@ -28,6 +28,7 @@ import { useEffect, useRef, useState } from "react";
 import { Logo } from "./Logo";
 import { Reveal } from "./Reveal";
 import { CatalogSection } from "./CatalogSection";
+import { ThemeToggle } from "./ThemeToggle";
 
 const whatsapp =
   "https://wa.me/50768272867?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20CONCREBOX%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20casas%20modulares.";
@@ -308,21 +309,24 @@ export function LandingPage() {
             </a>
           ))}
         </nav>
-        <a
-          className="nav-cta"
-          href={whatsapp}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Cotizar ahora <ArrowRight size={15} />
-        </a>
-        <button
-          className="menu-button"
-          onClick={() => setMenuOpen(true)}
-          aria-label="Abrir menú"
-        >
-          <Menu />
-        </button>
+        <div className="navbar__actions">
+          <ThemeToggle />
+          <a
+            className="nav-cta"
+            href={whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Cotizar ahora <ArrowRight size={15} />
+          </a>
+          <button
+            className="menu-button"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Abrir menú"
+          >
+            <Menu />
+          </button>
+        </div>
       </header>
 
       <AnimatePresence>

@@ -27,6 +27,7 @@ Contenido administrado automáticamente. No editar dentro de los marcadores.
 - [PRODUCTION_READINESS.md](PRODUCTION_READINESS.md)
 - [SECURITY.md](SECURITY.md)
 - [SEO.md](SEO.md)
+- [THEME_VERIFICATION.md](THEME_VERIFICATION.md)
 <!-- AUTO-GENERATED:END documentos -->
 
 ## Cuándo consultar cada documento

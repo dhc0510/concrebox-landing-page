@@ -7,6 +7,7 @@ import "@fontsource/playfair-display/500.css";
 import "@fontsource/playfair-display/600.css";
 import "./globals.css";
 import "./catalog.css";
+import "./theme.css";
 
 const siteUrl = "https://concreboxpty.com";
 const canonicalUrl = `${siteUrl}/`;
@@ -223,7 +224,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
+      <head>
+        {/* Apply the saved theme before paint; this small script is local and dependency-free. */}
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script src="/theme-init.js" />
+      </head>
       <body>
         {children}
         <script

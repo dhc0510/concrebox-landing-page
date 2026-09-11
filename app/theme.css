@@ -1,0 +1,113 @@
+/* Theme surfaces are separate from fixed white/ink used on photography and gold CTAs. */
+:root {
+  color-scheme: light;
+  --surface: #f8f8f6;
+  --surface-alt: #eeece5;
+  --surface-card: #ffffff;
+  --text: #20231f;
+  --text-muted: #5c6058;
+  --accent-text: #806020;
+  --border: #d0d2c9;
+  --nav-surface: rgba(248,248,246,.96);
+  --line-light: var(--border);
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface: #111310;
+  --surface-alt: #191c17;
+  --surface-card: #22261f;
+  --text: #f1f0e9;
+  --text-muted: #bdc2b5;
+  --accent-text: #dfbc69;
+  --border: #454b40;
+  --nav-surface: rgba(17,19,16,.96);
+  --wood: #dfbc69;
+  --line-light: var(--border);
+}
+body { background: var(--surface); color: var(--text); }
+.hero, .investment { color: #fff; }
+.section, .section--light, .manifesto, .footer { background: var(--surface); color: var(--text); }
+.manifesto, .process, .testimonials, .footer { background: var(--surface-alt); }
+.section .section-heading h2, .catalog-card__title h3, .catalog .catalog__cta-box span,
+.faq__contact a, .model-card__info, .model-card__content { color: var(--text); }
+.section .section-heading p, .manifesto__copy p, .metric p, .models__note,
+.model-card p, .model-card__content p, .model-card__info p, .process-step p, .process__cta > span,
+.brand-stories__aside p, .brand-stories__footer p, .testimonial > p,
+.testimonial > div strong, .testimonial small, .faq__contact p, .faq-list details > p,
+.footer__top > div:first-child > p, .footer__middle a, .footer__middle p,
+.footer__bottom, .footer__bottom a { color: var(--text-muted); }
+.section .eyebrow, .manifesto__label, .manifesto__quote em,
+.brand-stories__aside > span, .footer__middle > div > span,
+.footer__statement a, .benefit-card > svg, .benefit-card__number,
+.metric > span, .process-step__dot span, .testimonial > div span,
+.faq-list summary > span { color: var(--accent-text); }
+.benefit-card { background: var(--surface-card); color: var(--text); }
+.benefit-card p, .benefit-card:hover p { color: var(--text-muted); }
+.benefit-card:hover { background: var(--surface-alt); color: var(--text); }
+.system__metrics, .metric, .process__cta, .testimonial, .faq-list details,
+.footer__top, .footer__middle, .footer__bottom { border-color: var(--border); }
+.process-line::before { background: var(--border); }
+.process-step__dot { background: var(--surface-card); border-color: var(--border); }
+.text-link, .model-card__content > a { color: var(--text); border-color: var(--border); }
+.contact-action, .map-card { background: var(--surface-card); border-color: var(--border); }
+.contact-action:hover { background: var(--surface-alt); }
+.contact-action strong, .map-card__marker strong, .map-card > a { color: var(--text); }
+.contact-action span, .contact-action > svg:last-child, .map-card__meta,
+.map-card__marker small { color: var(--text-muted); }
+.map-card__marker > div { background: var(--surface-card); }
+.footer__middle a:hover { color: var(--text); }
+.footer .brand-lockup--light { color: var(--text); }
+
+.navbar { grid-template-columns: auto 1fr auto; gap: 22px; background: var(--nav-surface); color: var(--text); border-bottom: 1px solid var(--border); }
+.navbar::after { display: none; }
+.desktop-nav { justify-content: center; gap: clamp(12px, 1.3vw, 24px); }
+.navbar .brand-lockup--light, .desktop-nav a, .desktop-nav a:hover { color: var(--text); }
+.navbar__actions { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
+.nav-cta { border-color: var(--border); }
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; gap: 7px; min-width: 44px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface-card); color: var(--text); cursor: pointer; font-size: 11px; font-weight: 700; }
+.theme-toggle:hover { border-color: var(--accent-text); background: var(--surface-alt); }
+.theme-toggle__sun { display: none; }
+[data-theme="dark"] .theme-toggle__sun { display: block; }
+[data-theme="dark"] .theme-toggle__moon { display: none; }
+.theme-toggle:focus-visible, .navbar button:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 4px; }
+.mobile-menu { background: var(--surface); color: var(--text); overflow-y: auto; }
+.mobile-menu .brand-lockup--light { color: var(--text); }
+.mobile-menu nav a, .mobile-menu__top button { border-color: var(--border); }
+
+.catalog { background: radial-gradient(circle at 92% 8%, rgba(197,155,58,.08), transparent 28%), var(--surface); }
+.catalog-filters, .catalog .catalog-card__inner, .catalog .catalog-card:hover .catalog-card__inner,
+.catalog .catalog__cta-box { background: var(--surface-card); border-color: var(--border); }
+.catalog-filter-field input, .catalog-filter-field select { background: var(--surface); border-color: var(--border); color: var(--text); }
+.catalog-filter-field input::placeholder { color: var(--text-muted); opacity: 1; }
+.catalog-filter-field span, .catalog-filters__count, .catalog-filters__list button,
+.catalog-filters__clear, .catalog-card__actions button, .catalog__heading-note p,
+.catalog-card__price, .catalog .catalog-card__features li,
+.catalog .catalog-card__description, .catalog .catalog__cta-box p { color: var(--text-muted); }
+.catalog .catalog-card__area, .catalog .catalog-card__number, .catalog .catalog-card__badge { color: var(--accent-text); }
+.catalog-filters__list button.is-active, .catalog-filters__list button:hover,
+.catalog-filters__clear:not(:disabled):hover, .catalog-card__actions button:hover { background: var(--text); color: var(--surface); border-color: var(--text); }
+.catalog-card__actions button, .catalog-filters__clear { border-color: var(--border); }
+
+/* Photos retain their original colors in both themes. */
+.model-modal__dialog { background: var(--surface-card); color: var(--text); border-color: var(--border); }
+.model-modal__header, .model-modal__footer { border-color: var(--border); }
+.model-modal__header h2 { color: var(--text); }
+.model-modal__header p, .model-modal__header span { color: var(--text-muted); }
+.model-modal__header button, .model-modal__thumbnails > button { color: var(--text); border-color: var(--border); background: var(--surface); }
+.model-modal__thumbnails > button.is-active { color: var(--accent-text); border-color: var(--accent-text); }
+.model-modal__stage { background: var(--surface-alt); }
+.model-modal__stage.is-plan { background: var(--surface-alt); }
+.lightbox { background: var(--nav-surface); color: var(--text); }
+.lightbox__close { background: var(--surface-card); color: var(--text); border-color: var(--border); }
+.lightbox__image > span { color: var(--text-muted); }
+
+@media (max-width: 1350px) { .theme-toggle__label { display: none; } .navbar { gap: 14px; } }
+@media (max-width: 1100px) {
+  .navbar { grid-template-columns: 1fr auto; }
+  .navbar .desktop-nav, .navbar .nav-cta { display: none; }
+  .navbar .menu-button { display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .theme-toggle, .navbar { transition: none; }
+}

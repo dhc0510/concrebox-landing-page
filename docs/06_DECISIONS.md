@@ -53,3 +53,9 @@
 - Sustituir los catálogos anteriores por las 14 fichas del PDF aportado, sin selector de año.
 - Extraer originales; usar WebP, planos completos sin pérdida y variantes ligeras. Montar solo la imagen activa para evitar descargas ocultas.
 - Mantener trazabilidad de páginas, valores y criterios en [CATALOG_VERIFICATION.md](CATALOG_VERIFICATION.md).
+
+## 2026-09-10 — Tema sin dependencias adicionales
+
+- Usar tokens CSS de superficies y texto, conservando colores fijos sobre fotografías y CTAs.
+- Aplicar el tema mediante un pequeño script local síncrono antes del pintado para evitar destellos; persistir únicamente la preferencia visual.
+- Usar `useSyncExternalStore` para mantener el botón y la hidratación coherentes.
