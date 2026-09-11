@@ -5,7 +5,8 @@ import vm from 'node:vm';
 const source=fs.readFileSync('data/catalog.ts','utf8');
 const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText;
 const context={exports:{}}; vm.runInNewContext(js,context);
-const models=context.exports.catalogModels;
+const allModels=context.exports.catalogModels;
+const models=allModels.filter(m=>m.id<=14);
 const rows=fs.readFileSync('docs/CATALOG_VERIFICATION.md','utf8').split('\n').filter(x=>/^\| (Barva|Zurquí|Orosí|Tilarán|Upala|Talamanca|Turrialba|Tenorio|Tapantí|Irazú|Miravalles|Arenal|Poás|Térraba) \|/.test(x));
 assert.equal(models.length,14); assert.equal(rows.length,14);
 for (const row of rows) {
@@ -52,3 +53,33 @@ for (const model of models) {
 assert.equal(assetCount,34,'All PDF model views present');
 console.log('PASS: complete distribution checklist, unique models and 34 image associations.');
 console.log('PASS: 14 model names, areas, terraces, prices, bedrooms, bathrooms and 102 asset files checked against PDF transcription.');
+
+const expected2025 = [
+ ['Casa Bangkok',44,48365.5,1,1,'bangkok'],['Casa Singapur',44,51639,1,1,'singapur'],
+ ['Casa New York',67,71561,2,1,'new-york'],['Casa Dubái',106,114590,3,2,'dubai'],
+ ['Casa Estambul',119,114000,3,1,'estambul'],['Casa París',122,115688,2,1,'paris'],
+ ['Casa Londres',132,137805,2,1,'londres'],['Casa Tokio',99.23,95641.5,2,1,'tokio'],
+ ['Casa Hawai',72,80908,2,2,'hawai']
+];
+assert.equal(allModels.length,23);
+assert.equal(new Set(allModels.map(m=>m.id)).size,23);
+assert.equal(new Set(allModels.map(m=>m.name)).size,23);
+for (const [name,area,price,beds,baths,slug] of expected2025) {
+ const model=allModels.find(m=>m.name===name); assert.ok(model,name);
+ assert.equal(model.area,'Área '+area+' m²'+(slug==='hawai'?' + piscina de 12 m²':''));
+ assert.equal(Number(model.price.replace(/[^0-9.]/g,'').replace(/^\./,'')),price,name);
+ assert.equal(model.bedrooms,beds,name); assert.ok(model.features.includes(baths+' baño'+(baths>1?'s':'')),name);
+ assert.equal(model.hasTerrace,slug!=='dubai'); assert.equal(model.images.length,2);
+ for (const [i,image] of model.images.entries()) {
+  assert.equal(image.label,i===0?'Fachada':'Plano');
+  for (const field of ['src','fullSrc','thumbnailSrc']) {
+   assert.ok(image[field].startsWith('/images/catalog/verified/'+slug+'-'));
+   assert.ok(fs.statSync('public'+image[field]).size>0);
+  }
+ }
+}
+const section=fs.readFileSync('components/CatalogSection.tsx','utf8');
+assert.ok(section.includes('useState<CatalogSort>("price-asc")'));
+assert.ok(section.includes('setSort("price-asc")'));
+assert.ok(section.includes('sort !== "price-asc"'));
+console.log('PASS: 23 unique models, 9 additional PDF records and user corrections, 156 assets, ascending default and reset.');

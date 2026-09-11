@@ -79,7 +79,7 @@ export function CatalogSection() {
   const [amenityFilter, setAmenityFilter] =
     useState<CatalogAmenityFilter>("all");
   const [maxPrice, setMaxPrice] = useState<number | null>(null);
-  const [sort, setSort] = useState<CatalogSort>("default");
+  const [sort, setSort] = useState<CatalogSort>("price-asc");
   const [selectedModel, setSelectedModel] = useState<CatalogModel | null>(null);
   const [selectedImage, setSelectedImage] = useState(0);
   const activeCatalog = catalogCollection;
@@ -101,7 +101,7 @@ export function CatalogSection() {
     setBedroomFilter("all");
     setAmenityFilter("all");
     setMaxPrice(null);
-    setSort("default");
+    setSort("price-asc");
   };
 
   const filteredModels = useMemo(() => {
@@ -154,7 +154,7 @@ export function CatalogSection() {
     searchTerm.trim().length > 0 ||
     bedroomFilter !== "all" ||
     amenityFilter !== "all" ||
-    sort !== "default" ||
+    sort !== "price-asc" ||
     (priceCeiling > 0 && activeMaxPrice < priceCeiling);
 
   const openGallery = (model: CatalogModel, imageIndex: number) => {

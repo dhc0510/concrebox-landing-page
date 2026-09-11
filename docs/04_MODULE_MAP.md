@@ -43,7 +43,7 @@ Contenido administrado automáticamente. No editar dentro de los marcadores.
 - Evitar listar cada imagen individual salvo que la tarea sea de assets.
 - Para cambios de catálogo, empezar por `data/catalog.ts`, `CatalogSection.tsx`, `ModelCard.tsx` y `ModelGalleryModal.tsx`.
 
-- `scripts/catalog-check.mjs`: cotejo de datos y archivos de las 14 fichas contra la transcripción documental del PDF.
+- `scripts/catalog-check.mjs`: cotejo de datos y archivos de las 23 fichas contra la transcripción documental del PDF.
 - `docs/CATALOG_VERIFICATION.md`: fuente, páginas, precios, áreas y criterios de verificación del catálogo.
 
 ## Tema visual

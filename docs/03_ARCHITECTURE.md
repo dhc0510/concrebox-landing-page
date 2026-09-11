@@ -9,7 +9,7 @@ Aplicación frontend en Next.js con App Router, React, TypeScript, Tailwind CSS,
 - `app/layout.tsx`: metadata global, viewport, fuentes, estilos globales y JSON-LD.
 - `app/page.tsx`: página principal que monta la landing.
 - `components/LandingPage.tsx`: composición general de secciones principales.
-- `components/CatalogSection.tsx`: usa siempre la colección vigente de 14 modelos del PDF, sin estado ni selector de año; administra los demás filtros y el modal.
+- `components/CatalogSection.tsx`: usa siempre la colección vigente de 23 modelos de ambos PDF, sin estado ni selector de año; administra los demás filtros y el modal.
 - `components/ModelCard.tsx`: card de modelo con slider, características y CTA.
 - `components/ModelFilters.tsx`: filtros del catálogo.
 - `components/ModelGalleryModal.tsx`: lightbox accesible.

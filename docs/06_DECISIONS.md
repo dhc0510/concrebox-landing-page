@@ -67,3 +67,7 @@ Actualizar dependencias vulnerables y conservar `security:audit-deps` como requi
 ## Recuperación FTP — 2026-09-10
 
 La ejecución 34551706055 pasó todos los controles y falló al reemplazar `404/index.html` (FTP 550: ruta inexistente). Se usa `.ftp-deploy-sync-state-v2.json` para reconstruir el seguimiento remoto y crear de nuevo los directorios del export. Se mantiene este nombre en despliegues posteriores; no se activa borrado total. Los archivos históricos fuera del nuevo inventario permanecen en el servidor.
+
+## 2026-09-11 — Catálogo combinado por precio
+
+Sumar las 9 casas del PDF 2025 a las 14 del PDF 2026, sin filtro de año. Precio ascendente como selección inicial y al limpiar filtros. Los datos confirmados por el usuario para Singapur y Tokio prevalecen sobre los planos, conservados sin alteración. Se mantienen las áreas con las etiquetas de cada fuente.

@@ -101,3 +101,7 @@ El workflow `.github/workflows/deploy-hostinger.yml` ejecuta `npm run seo:check`
 - Las vistas de tarjeta miden hasta 960 px; las miniaturas hasta 240 px. Las imágenes completas conservan su resolución original.
 - Se mantiene el diseño responsive y se ajusta la proporción de las fotos a 16:10; la galería permite distribuir las miniaturas en varias filas.
 - La medición anterior de 30.25 MB corresponde al catálogo previo y no describe la carga inicial vigente. Los archivos históricos siguen almacenados pero no se referencian desde el catálogo.
+
+## Ampliación 2025 — 2026-09-11
+
+Se suman 9 fachadas y 9 planos con 54 variantes WebP. Se mantiene la carga diferida de una sola imagen por tarjeta y los completos bajo demanda. SEO valida 171 referencias de imágenes (35.46 MB de assets referenciados, no de descarga inicial) y 63 enlaces en el export.

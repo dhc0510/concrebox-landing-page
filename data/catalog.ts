@@ -508,6 +508,295 @@ export const catalogModels: CatalogModel[] = [
     "bedrooms": 3,
     "hasTerrace": true,
     "compact": false
+  },
+  {
+    "id": 15,
+    "name": "Casa Bangkok",
+    "area": "Área 44 m²",
+    "price": "B/. 48,365.50",
+    "eyebrow": "Compacta",
+    "images": [
+      {
+        "src": "/images/catalog/verified/bangkok-fachada-1.webp",
+        "fullSrc": "/images/catalog/verified/bangkok-fachada-1-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/bangkok-fachada-1-thumb.webp",
+        "label": "Fachada"
+      },
+      {
+        "src": "/images/catalog/verified/bangkok-plano-2.webp",
+        "fullSrc": "/images/catalog/verified/bangkok-plano-2-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/bangkok-plano-2-thumb.webp",
+        "label": "Plano"
+      }
+    ],
+    "features": [
+      "1 dormitorio",
+      "1 baño",
+      "Sala integrada",
+      "Cocina abierta",
+      "Terraza de madera"
+    ],
+    "description": "Vivienda compacta con dormitorio matrimonial, baño, sala integrada con cocina y terraza de madera.",
+    "bedrooms": 1,
+    "hasTerrace": true,
+    "compact": true
+  },
+  {
+    "id": 16,
+    "name": "Casa Singapur",
+    "area": "Área 44 m²",
+    "price": "B/. 51,639.00",
+    "eyebrow": "Compacta",
+    "images": [
+      {
+        "src": "/images/catalog/verified/singapur-fachada-1.webp",
+        "fullSrc": "/images/catalog/verified/singapur-fachada-1-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/singapur-fachada-1-thumb.webp",
+        "label": "Fachada"
+      },
+      {
+        "src": "/images/catalog/verified/singapur-plano-2.webp",
+        "fullSrc": "/images/catalog/verified/singapur-plano-2-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/singapur-plano-2-thumb.webp",
+        "label": "Plano"
+      }
+    ],
+    "features": [
+      "1 dormitorio",
+      "1 baño",
+      "Sala y cocina abierta",
+      "Terraza frontal"
+    ],
+    "description": "Vivienda compacta con un dormitorio, un baño, cocina abierta conectada a la sala y terraza frontal.",
+    "bedrooms": 1,
+    "hasTerrace": true,
+    "compact": true
+  },
+  {
+    "id": 17,
+    "name": "Casa New York",
+    "area": "Área 67 m²",
+    "price": "B/. 71,561.00",
+    "eyebrow": "Residencial",
+    "images": [
+      {
+        "src": "/images/catalog/verified/new-york-fachada-1.webp",
+        "fullSrc": "/images/catalog/verified/new-york-fachada-1-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/new-york-fachada-1-thumb.webp",
+        "label": "Fachada"
+      },
+      {
+        "src": "/images/catalog/verified/new-york-plano-2.webp",
+        "fullSrc": "/images/catalog/verified/new-york-plano-2-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/new-york-plano-2-thumb.webp",
+        "label": "Plano"
+      }
+    ],
+    "features": [
+      "2 dormitorios",
+      "1 baño",
+      "Sala integrada",
+      "Cocina abierta",
+      "Terraza frontal"
+    ],
+    "description": "Casa con dos dormitorios, baño completo y cocina abierta integrada a la sala, con amplia terraza frontal.",
+    "bedrooms": 2,
+    "hasTerrace": true,
+    "compact": false
+  },
+  {
+    "id": 18,
+    "name": "Casa Dubái",
+    "area": "Área 106 m²",
+    "price": "B/. 114,590.00",
+    "eyebrow": "Familiar",
+    "images": [
+      {
+        "src": "/images/catalog/verified/dubai-fachada-1.webp",
+        "fullSrc": "/images/catalog/verified/dubai-fachada-1-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/dubai-fachada-1-thumb.webp",
+        "label": "Fachada"
+      },
+      {
+        "src": "/images/catalog/verified/dubai-plano-2.webp",
+        "fullSrc": "/images/catalog/verified/dubai-plano-2-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/dubai-plano-2-thumb.webp",
+        "label": "Plano"
+      }
+    ],
+    "features": [
+      "3 dormitorios",
+      "2 baños",
+      "Sala de estar",
+      "Cocina",
+      "Cochera integrada",
+      "Pórtico frontal"
+    ],
+    "description": "Vivienda familiar con tres dormitorios, dos baños completos, cocina conectada a la sala de estar, cochera y pórtico frontal.",
+    "bedrooms": 3,
+    "hasTerrace": false,
+    "compact": false
+  },
+  {
+    "id": 19,
+    "name": "Casa Estambul",
+    "area": "Área 119 m²",
+    "price": "B/. 114,000.00",
+    "eyebrow": "Familiar",
+    "images": [
+      {
+        "src": "/images/catalog/verified/estambul-fachada-1.webp",
+        "fullSrc": "/images/catalog/verified/estambul-fachada-1-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/estambul-fachada-1-thumb.webp",
+        "label": "Fachada"
+      },
+      {
+        "src": "/images/catalog/verified/estambul-plano-2.webp",
+        "fullSrc": "/images/catalog/verified/estambul-plano-2-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/estambul-plano-2-thumb.webp",
+        "label": "Plano"
+      }
+    ],
+    "features": [
+      "3 dormitorios",
+      "1 baño",
+      "Sala de estar",
+      "Comedor",
+      "Cocina abierta",
+      "Terraza frontal"
+    ],
+    "description": "Casa de un nivel con tres dormitorios, baño completo, sala de estar, comedor y cocina de concepto abierto, con terraza frontal y techo inclinado.",
+    "bedrooms": 3,
+    "hasTerrace": true,
+    "compact": false
+  },
+  {
+    "id": 20,
+    "name": "Casa París",
+    "area": "Área 122 m²",
+    "price": "B/. 115,688.00",
+    "eyebrow": "Residencial",
+    "images": [
+      {
+        "src": "/images/catalog/verified/paris-fachada-1.webp",
+        "fullSrc": "/images/catalog/verified/paris-fachada-1-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/paris-fachada-1-thumb.webp",
+        "label": "Fachada"
+      },
+      {
+        "src": "/images/catalog/verified/paris-plano-2.webp",
+        "fullSrc": "/images/catalog/verified/paris-plano-2-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/paris-plano-2-thumb.webp",
+        "label": "Plano"
+      }
+    ],
+    "features": [
+      "2 dormitorios",
+      "1 baño",
+      "Sala integrada",
+      "Cocina con isla central",
+      "Terrazas exteriores"
+    ],
+    "description": "Casa con dos dormitorios, baño completo y cocina con isla central integrada a la sala; terrazas exteriores y ventanales de piso a techo.",
+    "bedrooms": 2,
+    "hasTerrace": true,
+    "compact": false
+  },
+  {
+    "id": 21,
+    "name": "Casa Londres",
+    "area": "Área 132 m²",
+    "price": "B/. 137,805.00",
+    "eyebrow": "Residencial",
+    "images": [
+      {
+        "src": "/images/catalog/verified/londres-fachada-1.webp",
+        "fullSrc": "/images/catalog/verified/londres-fachada-1-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/londres-fachada-1-thumb.webp",
+        "label": "Fachada"
+      },
+      {
+        "src": "/images/catalog/verified/londres-plano-2.webp",
+        "fullSrc": "/images/catalog/verified/londres-plano-2-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/londres-plano-2-thumb.webp",
+        "label": "Plano"
+      }
+    ],
+    "features": [
+      "2 dormitorios",
+      "1 baño",
+      "Sala de estar integrada",
+      "Cocina",
+      "Terraza amplia"
+    ],
+    "description": "Vivienda de un nivel con dos dormitorios, baño completo y sala de estar integrada a la cocina, con estructura elevada y amplia terraza.",
+    "bedrooms": 2,
+    "hasTerrace": true,
+    "compact": false
+  },
+  {
+    "id": 22,
+    "name": "Casa Tokio",
+    "area": "Área 99.23 m²",
+    "price": "B/. 95,641.50",
+    "eyebrow": "Residencial",
+    "images": [
+      {
+        "src": "/images/catalog/verified/tokio-fachada-1.webp",
+        "fullSrc": "/images/catalog/verified/tokio-fachada-1-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/tokio-fachada-1-thumb.webp",
+        "label": "Fachada"
+      },
+      {
+        "src": "/images/catalog/verified/tokio-plano-2.webp",
+        "fullSrc": "/images/catalog/verified/tokio-plano-2-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/tokio-plano-2-thumb.webp",
+        "label": "Plano"
+      }
+    ],
+    "features": [
+      "2 dormitorios",
+      "1 baño",
+      "Cocina",
+      "Área de pilas",
+      "Terrazas exteriores"
+    ],
+    "description": "Casa con dos dormitorios, un baño, cocina, área de pilas y terrazas exteriores, con techos inclinados y grandes ventanales.",
+    "bedrooms": 2,
+    "hasTerrace": true,
+    "compact": false
+  },
+  {
+    "id": 23,
+    "name": "Casa Hawai",
+    "area": "Área 72 m² + piscina de 12 m²",
+    "price": "B/. 80,908.00",
+    "eyebrow": "Residencial",
+    "images": [
+      {
+        "src": "/images/catalog/verified/hawai-fachada-1.webp",
+        "fullSrc": "/images/catalog/verified/hawai-fachada-1-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/hawai-fachada-1-thumb.webp",
+        "label": "Fachada"
+      },
+      {
+        "src": "/images/catalog/verified/hawai-plano-2.webp",
+        "fullSrc": "/images/catalog/verified/hawai-plano-2-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/hawai-plano-2-thumb.webp",
+        "label": "Plano"
+      }
+    ],
+    "features": [
+      "2 dormitorios",
+      "2 baños",
+      "Cocina con isla central",
+      "Terraza con pérgola",
+      "Piscina de 12 m²"
+    ],
+    "description": "Casa con dos dormitorios, cada uno con baño privado, cocina abierta con isla central y terraza con pérgola conectada a una piscina de 12 m².",
+    "bedrooms": 2,
+    "hasTerrace": true,
+    "compact": false
   }
 ];
 

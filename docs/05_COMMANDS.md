@@ -146,3 +146,7 @@ Se verificaron build, lint, security:audit-deps (0 vulnerabilidades), security:c
 ## Recuperación FTP — 2026-09-10
 
 La ejecución 34551706055 pasó todos los controles y falló al reemplazar `404/index.html` (FTP 550: ruta inexistente). Se usa `.ftp-deploy-sync-state-v2.json` para reconstruir el seguimiento remoto y crear de nuevo los directorios del export. Se mantiene este nombre en despliegues posteriores; no se activa borrado total. Los archivos históricos fuera del nuevo inventario permanecen en el servidor.
+
+## Catálogo combinado
+
+`node scripts/catalog-check.mjs` verifica las 23 fichas, los datos corregidos de Singapur/Tokio, los assets y el orden ascendente inicial y al limpiar filtros.

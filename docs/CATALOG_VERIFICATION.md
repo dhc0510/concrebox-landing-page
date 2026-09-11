@@ -25,7 +25,7 @@ Se revisaron visualmente las páginas 1-30 y se cotejó el texto extraíble de l
 
 ## Precisiones de contenido
 
-- El catálogo vigente reemplaza los modelos anteriores y contiene 14 fichas, sin selector de año.
+- La incorporación inicial contenía 14 fichas. Desde 2026-09-11 se suman las 9 casas del PDF 2025: 23 modelos, sin selector de año.
 - Turrialba: corregido el precio anterior de 80,390.50 a 66,360.50 según página 15.
 - Barva: 21.01 m² corresponden al área cerrada, según página 2.
 - Térraba: garaje adicional de 32.87 m²; el filtro de tres dormitorios cuenta la recámara de servicio y la ficha explica la distribución exacta.
@@ -61,3 +61,30 @@ La tabla anterior sirve como referencia independiente para cotejar `data/catalog
 - Se volvió a extraer cada una de las 34 imágenes desde su página exacta del PDF, se aplicó la codificación documentada y se compararon los bytes con los archivos completos publicados: 34/34 coinciden. Esto incluye las variantes de Orosí, Upala y Térraba y los 14 planos.
 - Se amplió `scripts/catalog-check.mjs` con una lista de distribución por casa, detección de modelos duplicados y asociación de rutas de imágenes a su modelo.
 - Upala: la descripción resume el uso del modelo; la disponibilidad inmediata del PDF sigue pendiente de confirmación comercial, como se explica arriba. No se presenta como disponibilidad actual garantizada.
+
+## Incorporación del PDF 2025 — 2026-09-11
+
+Fuente: `CATALOGO CONCREBOX 2025(1).pdf`, 20 páginas. SHA-256: `a11d4a69b028ee0d4e83bd80c1f72df242433c652c4427a667ee7ddb0caa11b9`. Páginas 1-2: portada y presentación. Se revisaron visualmente todas las fichas y planos de páginas 3-20.
+
+| Casa | Páginas | Área publicada m² | Precio B/. | Dormitorios | Baños |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Bangkok | 3-4 | 44 | 48,365.50 | 1 | 1 |
+| Singapur | 5-6 | 44 | 51,639.00 | 1 | 1 |
+| New York | 7-8 | 67 | 71,561.00 | 2 | 1 |
+| Dubái | 9-10 | 106 | 114,590.00 | 3 | 2 |
+| Estambul | 11-12 | 119 | 114,000.00 | 3 | 1 |
+| París | 13-14 | 122 | 115,688.00 | 2 | 1 |
+| Londres | 15-16 | 132 | 137,805.00 | 2 | 1 |
+| Tokio | 17-18 | 99.23 | 95,641.50 | 2 | 1 |
+| Hawai | 19-20 | 72 + piscina 12 | 80,908.00 | 2 | 2 |
+
+- Corrección explícita del usuario: Singapur tiene 1 dormitorio y 1 baño; Tokio, 2 dormitorios y 1 baño. Estas cifras prevalecen sobre los planos contradictorios. Se conservan los planos originales sin redibujarlos.
+- El PDF 2025 presenta área global, no área cerrada: se conserva la etiqueta Área y no se inventa un desglose. Hawai añade 12 m² de piscina; no se afirma que esté excluida del precio.
+- Dubái incorpora cochera y pórtico; no se clasifica el pórtico como terraza. Tokio incluye el área de pilas visible en su plano.
+- Se añaden 18 imágenes extraídas de las páginas rasterizadas originales de 2481 × 3509 px, recortando solo la fachada o plano correspondiente. Se conservan las cotas de los planos.
+- 54 WebP nuevos: completos (fotos calidad 92, planos sin pérdida verificados píxel a píxel), tarjetas hasta 960 px y miniaturas hasta 240 px. No se agregan los 59 MB del PDF al sitio.
+- Total combinado: 23 modelos, 52 vistas y 156 variantes. Orden inicial y al limpiar filtros: precio ascendente; todos los demás filtros permanecen disponibles.
+
+### Validación de la ampliación
+
+Build, lint, security:check, seo:check, docs:check y catalog-check correctos. Navegador: 23 precios en orden ascendente; selección y limpieza de orden; búsqueda Singapur y Tokio; filtro Piscina devuelve Hawai/Arenal y Cochera devuelve Dubái/Térraba; modal móvil con plano; escritorio 1280 px y móvil 390 px sin desbordamiento horizontal. Consola sin errores en las interacciones revisadas.

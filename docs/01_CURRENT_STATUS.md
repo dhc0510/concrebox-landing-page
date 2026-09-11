@@ -7,7 +7,7 @@ Estado vigente del proyecto. Mantener breve y orientado a lo que funciona hoy.
 - Landing page en Next.js con exportación estática.
 - Diseño responsive premium para CONCREBOX PTY.
 - Navbar, hero, beneficios, sistema constructivo, catálogo, proceso, inversión, galería, testimonios, FAQ, contacto y footer.
-- Catálogo unificado con los 14 modelos del PDF verificado visibles inicialmente, sin selector de año. Conserva búsqueda, filtros por tipo, dormitorios, amenidades y precio, ordenamiento, cards, slider y modal/lightbox.
+- Catálogo unificado con los 23 modelos de ambos PDF visibles inicialmente, ordenados por precio ascendente, sin selector de año. Conserva búsqueda, filtros por tipo, dormitorios, amenidades y precio, ordenamiento, cards, slider y modal/lightbox.
 - CTAs hacia WhatsApp.
 - Metadatos SEO/sociales, canonical de producción, `robots.txt`, `sitemap.xml`, JSON-LD y checks `seo:*`.
 - Imágenes principales de la landing optimizadas en JPG para reducir peso sin cambiar la dirección visual.
