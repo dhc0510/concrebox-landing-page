@@ -162,27 +162,27 @@ export const catalogModels: CatalogModel[] = [
     "eyebrow": "Compacta",
     "images": [
       {
-        "src": "/images/catalog/verified/upala-20261001-fachada-1.webp",
-        "fullSrc": "/images/catalog/verified/upala-20261001-fachada-1-full.webp",
-        "thumbnailSrc": "/images/catalog/verified/upala-20261001-fachada-1-thumb.webp",
+        "src": "/images/catalog/verified/upala-20261001-original-fachada-1.webp",
+        "fullSrc": "/images/catalog/verified/upala-20261001-original-fachada-1-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/upala-20261001-original-fachada-1-thumb.webp",
         "label": "Fachada"
       },
       {
-        "src": "/images/catalog/verified/upala-20261001-fachada-2.webp",
-        "fullSrc": "/images/catalog/verified/upala-20261001-fachada-2-full.webp",
-        "thumbnailSrc": "/images/catalog/verified/upala-20261001-fachada-2-thumb.webp",
+        "src": "/images/catalog/verified/upala-20261001-original-fachada-2.webp",
+        "fullSrc": "/images/catalog/verified/upala-20261001-original-fachada-2-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/upala-20261001-original-fachada-2-thumb.webp",
         "label": "Fachada"
       },
       {
-        "src": "/images/catalog/verified/upala-20261001-fachada-3.webp",
-        "fullSrc": "/images/catalog/verified/upala-20261001-fachada-3-full.webp",
-        "thumbnailSrc": "/images/catalog/verified/upala-20261001-fachada-3-thumb.webp",
+        "src": "/images/catalog/verified/upala-20261001-original-fachada-3.webp",
+        "fullSrc": "/images/catalog/verified/upala-20261001-original-fachada-3-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/upala-20261001-original-fachada-3-thumb.webp",
         "label": "Fachada"
       },
       {
-        "src": "/images/catalog/verified/upala-20261001-plano-4.webp",
-        "fullSrc": "/images/catalog/verified/upala-20261001-plano-4-full.webp",
-        "thumbnailSrc": "/images/catalog/verified/upala-20261001-plano-4-thumb.webp",
+        "src": "/images/catalog/verified/upala-20261001-original-plano-4.webp",
+        "fullSrc": "/images/catalog/verified/upala-20261001-original-plano-4-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/upala-20261001-original-plano-4-thumb.webp",
         "label": "Plano"
       }
     ],

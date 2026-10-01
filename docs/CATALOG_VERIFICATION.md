@@ -99,3 +99,8 @@ Build, lint, security:check, seo:check, docs:check y catalog-check correctos. Na
 - Los otros 22 registros del catálogo y los componentes, filtros, orden, temas y diseño permanecen iguales.
 
 Validación 2026-10-01: comparación estructural de los otros 22 modelos contra HEAD sin diferencias; catálogo de 23 registros correcto. Chromium/Edge automatizado: búsqueda, cuatro imágenes, apertura/cierre de galería y anchuras 1440, 768 y 390 px sin desbordamiento horizontal ni errores JavaScript. Build, lint, controles de seguridad, auditoría de producción y comprobaciones documentales correctos.
+
+
+## Originales de alta resolución de Upala — 2026-10-01
+
+Las cuatro imágenes originales aportadas posteriormente por el usuario sustituyen las vistas reconstruidas y el plano de baja resolución de la actualización anterior. Tres exteriores de 1600 px de ancho y plano de 1536 × 1024 px, conservando encuadres, orientación y contenido. No se aplica generación ni reconstrucción con IA. Fotos completas WebP calidad 94, plano completo sin pérdida verificado píxel a píxel; tarjetas hasta 960 px y miniaturas de 240 px. Rutas `upala-20261001-original-*` para invalidar caché. Solo cambian las referencias de imágenes de Upala; sus datos y los otros 22 modelos se mantienen. Las áreas y precio siguen la ficha comercial confirmada, sin recalcularlos de las cotas del plano.

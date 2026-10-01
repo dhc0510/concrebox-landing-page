@@ -73,3 +73,8 @@ Se recuperan los estilos originales del navbar en globals.css: transparente al i
 ## Upala — 2026-10-01
 
 Actualizada únicamente la ficha de Upala y sus cuatro vistas en `data/catalog.ts`, con assets versionados `public/images/catalog/verified/upala-20261001-*`. Conserva precio y áreas; especifica cocina y terraza posterior. Origen, tratamiento y limitaciones documentados en `CATALOG_VERIFICATION.md`. Los otros 22 modelos y el diseño no cambian.
+
+
+### Upala: originales de alta resolución — 2026-10-01
+
+Reemplazadas sus cuatro imágenes por originales del usuario con variantes WebP optimizadas y plano completo sin pérdida. Detalles en `CATALOG_VERIFICATION.md`. Datos, otros modelos y diseño sin cambios.
