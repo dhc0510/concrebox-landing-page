@@ -162,37 +162,37 @@ export const catalogModels: CatalogModel[] = [
     "eyebrow": "Compacta",
     "images": [
       {
-        "src": "/images/catalog/verified/upala-fachada-1.webp",
-        "fullSrc": "/images/catalog/verified/upala-fachada-1-full.webp",
-        "thumbnailSrc": "/images/catalog/verified/upala-fachada-1-thumb.webp",
+        "src": "/images/catalog/verified/upala-20261001-fachada-1.webp",
+        "fullSrc": "/images/catalog/verified/upala-20261001-fachada-1-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/upala-20261001-fachada-1-thumb.webp",
         "label": "Fachada"
       },
       {
-        "src": "/images/catalog/verified/upala-fachada-2.webp",
-        "fullSrc": "/images/catalog/verified/upala-fachada-2-full.webp",
-        "thumbnailSrc": "/images/catalog/verified/upala-fachada-2-thumb.webp",
+        "src": "/images/catalog/verified/upala-20261001-fachada-2.webp",
+        "fullSrc": "/images/catalog/verified/upala-20261001-fachada-2-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/upala-20261001-fachada-2-thumb.webp",
         "label": "Fachada"
       },
       {
-        "src": "/images/catalog/verified/upala-fachada-3.webp",
-        "fullSrc": "/images/catalog/verified/upala-fachada-3-full.webp",
-        "thumbnailSrc": "/images/catalog/verified/upala-fachada-3-thumb.webp",
+        "src": "/images/catalog/verified/upala-20261001-fachada-3.webp",
+        "fullSrc": "/images/catalog/verified/upala-20261001-fachada-3-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/upala-20261001-fachada-3-thumb.webp",
         "label": "Fachada"
       },
       {
-        "src": "/images/catalog/verified/upala-plano-4.webp",
-        "fullSrc": "/images/catalog/verified/upala-plano-4-full.webp",
-        "thumbnailSrc": "/images/catalog/verified/upala-plano-4-thumb.webp",
+        "src": "/images/catalog/verified/upala-20261001-plano-4.webp",
+        "fullSrc": "/images/catalog/verified/upala-20261001-plano-4-full.webp",
+        "thumbnailSrc": "/images/catalog/verified/upala-20261001-plano-4-thumb.webp",
         "label": "Plano"
       }
     ],
     "features": [
       "1 dormitorio",
       "1 baño",
-      "Cocina de concepto abierto",
-      "Terraza"
+      "Cocina",
+      "Terraza posterior"
     ],
-    "description": "Modelo práctico y funcional para una pareja o un proyecto de alojamiento, con cocina abierta y terraza.",
+    "description": "Modelo compacto con cocina, un dormitorio, un baño y terraza posterior.",
     "bedrooms": 1,
     "hasTerrace": true,
     "compact": true

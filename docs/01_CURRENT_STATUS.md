@@ -68,3 +68,8 @@ La ejecución 34551706055 pasó todos los controles y falló al reemplazar `404/
 ## Navbar transparente — 2026-09-11
 
 Se recuperan los estilos originales del navbar en globals.css: transparente al inicio, línea inferior tenue y fondo oscuro translúcido con desenfoque al superar 36 px de scroll. Se conservan el selector día/noche, su espacio responsive y los demás cambios. El botón del tema usa un acabado transparente con texto blanco dentro del navbar.
+
+
+## Upala — 2026-10-01
+
+Actualizada únicamente la ficha de Upala y sus cuatro vistas en `data/catalog.ts`, con assets versionados `public/images/catalog/verified/upala-20261001-*`. Conserva precio y áreas; especifica cocina y terraza posterior. Origen, tratamiento y limitaciones documentados en `CATALOG_VERIFICATION.md`. Los otros 22 modelos y el diseño no cambian.

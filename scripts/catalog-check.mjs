@@ -26,7 +26,7 @@ const distribution = {
  'Zurquí': ['cocina', 'sala', 'terraza'],
  'Orosí': ['cocina', 'sala', 'terraza', 'piedra clara u oscura'],
  'Tilarán': ['cocina', 'sala', 'terraza'],
- Upala: ['cocina de concepto abierto', 'terraza'],
+ Upala: ['cocina', 'terraza posterior'],
  Talamanca: ['cocina abierta con desayunador', 'lavandería integrada', 'terraza frontal'],
  Turrialba: ['recámara principal', 'sala de estar', 'cocina abierta con desayunador', 'terraza exterior'],
  Tenorio: ['baño compartido', 'sala de estar', 'cocina de concepto abierto', 'terraza perimetral en u', 'circulación central'],

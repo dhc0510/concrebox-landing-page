@@ -88,3 +88,14 @@ Fuente: `CATALOGO CONCREBOX 2025(1).pdf`, 20 páginas. SHA-256: `a11d4a69b028ee0
 ### Validación de la ampliación
 
 Build, lint, security:check, seo:check, docs:check y catalog-check correctos. Navegador: 23 precios en orden ascendente; selección y limpieza de orden; búsqueda Singapur y Tokio; filtro Piscina devuelve Hawai/Arenal y Cochera devuelve Dubái/Térraba; modal móvil con plano; escritorio 1280 px y móvil 390 px sin desbordamiento horizontal. Consola sin errores en las interacciones revisadas.
+
+
+## Actualización exclusiva de Upala — 2026-10-01
+
+- Fuente vigente para Upala: ficha PNG de 454 × 825 px adjunta por el usuario; sustituye sus vistas del PDF 2026. Área cerrada 25.11 m², terraza 3.19 m², precio B/. 31,356.50, un dormitorio, un baño, cocina y terraza posterior.
+- Tres exteriores mejorados con la herramienta integrada de imágenes y revisados visualmente contra la referencia. Son reconstrucciones asistidas para mejorar nitidez desde una fuente pequeña; no equivalen a fotografías originales de alta resolución. Instrucción: conservar encuadres, geometría, cubierta, puertas y ventanas sin rediseñar la casa.
+- Plano recortado de la ficha original, sin generación ni modificación de cotas; WebP sin pérdida comprobado píxel a píxel. Su detalle sigue limitado por la resolución original.
+- Nuevas rutas `upala-20261001-*` evitan reutilizar imágenes antiguas desde caché. Variantes de tarjeta, miniatura y ampliación; foto principal de tarjeta 92,052 bytes. Se conserva la carga diferida existente.
+- Los otros 22 registros del catálogo y los componentes, filtros, orden, temas y diseño permanecen iguales.
+
+Validación 2026-10-01: comparación estructural de los otros 22 modelos contra HEAD sin diferencias; catálogo de 23 registros correcto. Chromium/Edge automatizado: búsqueda, cuatro imágenes, apertura/cierre de galería y anchuras 1440, 768 y 390 px sin desbordamiento horizontal ni errores JavaScript. Build, lint, controles de seguridad, auditoría de producción y comprobaciones documentales correctos.
