@@ -102,3 +102,8 @@ Si se agrega backend, formularios procesados por servidor, base de datos o auten
 La ejecución 34551396726 detectó avisos en Next.js, sharp, nanoid y baseline-browser-mapping. Se actualizan las versiones afectadas y se mantiene el umbral moderate de producción.
 
 Validación local de la corrección: build, lint, security:check, auditoría de producción (0 vulnerabilidades), pruebas de catálogo y tema, SEO y docs:check correctos.
+
+
+## Parche necesario para publicar — 2026-10-01
+
+Se actualizan Next.js y eslint-config-next de 16.3.4 a 16.3.6 para corregir GHSA-vcvr-r3jv-pc5j, detectado por el control de producción del despliegue. Se mantiene el umbral de auditoría y el flujo de Hostinger. Auditoría de producción: 0 vulnerabilidades. Compilación estática y lint comprobados; no se cambian componentes ni estilos. La auditoría completa conserva un aviso en brace-expansion, dependencia de desarrollo fuera de este cambio.

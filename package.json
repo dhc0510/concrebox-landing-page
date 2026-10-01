@@ -27,7 +27,7 @@
     "@fontsource/playfair-display": "latest",
     "framer-motion": "latest",
     "lucide-react": "latest",
-    "next": "^16.3.4",
+    "next": "^16.3.6",
     "react": "latest",
     "react-dom": "latest"
   },
@@ -37,7 +37,7 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "eslint": "latest",
-    "eslint-config-next": "^16.3.4",
+    "eslint-config-next": "^16.3.6",
     "tailwindcss": "latest",
     "typescript": "latest"
   },

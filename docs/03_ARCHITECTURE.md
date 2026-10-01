@@ -90,3 +90,8 @@ La ejecución 34551706055 pasó todos los controles y falló al reemplazar `404/
 ## Navbar transparente — 2026-09-11
 
 Se recuperan los estilos originales del navbar en globals.css: transparente al inicio, línea inferior tenue y fondo oscuro translúcido con desenfoque al superar 36 px de scroll. Se conservan el selector día/noche, su espacio responsive y los demás cambios. El botón del tema usa un acabado transparente con texto blanco dentro del navbar.
+
+
+## Parche necesario para publicar — 2026-10-01
+
+Se actualizan Next.js y eslint-config-next de 16.3.4 a 16.3.6 para corregir GHSA-vcvr-r3jv-pc5j, detectado por el control de producción del despliegue. Se mantiene el umbral de auditoría y el flujo de Hostinger. Auditoría de producción: 0 vulnerabilidades. Compilación estática y lint comprobados; no se cambian componentes ni estilos. La auditoría completa conserva un aviso en brace-expansion, dependencia de desarrollo fuera de este cambio.
